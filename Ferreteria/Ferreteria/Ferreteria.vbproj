@@ -73,11 +73,47 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCategorias.Designer.vb">
+      <DependentUpon>frmCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fmFerreteria.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fmFerreteria.Designer.vb">
       <DependentUpon>fmFerreteria.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarios.Designer.vb">
+      <DependentUpon>frmInventarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocales.Designer.vb">
+      <DependentUpon>frmLocales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedidas.Designer.vb">
+      <DependentUpon>frmMedidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.vb">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedores.Designer.vb">
+      <DependentUpon>frmProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -99,6 +135,24 @@
   <ItemGroup>
     <EmbeddedResource Include="fmFerreteria.resx">
       <DependentUpon>fmFerreteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategorias.resx">
+      <DependentUpon>frmCategorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarios.resx">
+      <DependentUpon>frmInventarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocales.resx">
+      <DependentUpon>frmLocales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedidas.resx">
+      <DependentUpon>frmMedidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedores.resx">
+      <DependentUpon>frmProveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
