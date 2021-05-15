@@ -1,0 +1,12 @@
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.exe.config
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.exe
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.pdb
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.xml
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbprojAssemblyReference.cache
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.fmFerreteria.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Resources.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.GenerateResource.cache
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.CoreCompileInputs.cache
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.exe
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.xml
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.pdb
