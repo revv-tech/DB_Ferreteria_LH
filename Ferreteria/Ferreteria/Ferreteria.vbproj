@@ -92,14 +92,6 @@
       <DependentUpon>fmFerreteria.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-
-    <Compile Include="frmClientes.Designer.vb">
-      <DependentUpon>frmClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmEmpleados.Designer.vb">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
@@ -118,8 +110,7 @@
     <Compile Include="frmIngresos.vb">
       <SubType>Form</SubType>
     </Compile>
-=======
->>>>>>> parent of cdd7521 (Commit)
+
     <Compile Include="frmInventarios.Designer.vb">
       <DependentUpon>frmInventarios.vb</DependentUpon>
     </Compile>
@@ -138,6 +129,12 @@
     <Compile Include="frmMedidas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPedidos.Designer.vb">
+      <DependentUpon>frmPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProductos.Designer.vb">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </Compile>
@@ -150,13 +147,6 @@
     <Compile Include="frmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-
-    <Compile Include="frmTiposDeVenta.Designer.vb">
-      <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTiposDeVenta.vb">
-
     <Compile Include="frmTipoVenta.Designer.vb">
       <DependentUpon>frmTipoVenta.vb</DependentUpon>
     </Compile>
@@ -164,8 +154,10 @@
 
       <SubType>Form</SubType>
     </Compile>
-=======
->>>>>>> parent of cdd7521 (Commit)
+
+      <SubType>Form</SubType>
+    </Compile>
+
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -189,10 +181,12 @@
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
+
+
 
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
@@ -204,8 +198,6 @@
       <DependentUpon>frmIngresos.vb</DependentUpon>
     </EmbeddedResource>
 
-=======
->>>>>>> parent of cdd7521 (Commit)
     <EmbeddedResource Include="frmInventarios.resx">
       <DependentUpon>frmInventarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -215,23 +207,21 @@
     <EmbeddedResource Include="frmMedidas.resx">
       <DependentUpon>frmMedidas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPedidos.resx">
+      <DependentUpon>frmPedidos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-
     <EmbeddedResource Include="frmTiposDeVenta.resx">
       <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
-
     <EmbeddedResource Include="frmTipoVenta.resx">
       <DependentUpon>frmTipoVenta.vb</DependentUpon>
-
     </EmbeddedResource>
-=======
->>>>>>> parent of cdd7521 (Commit)
+
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -250,6 +240,42 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar-cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco-flexible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombres-para-Ferreterias.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombres-para-Ferreterias1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombres-para-Ferreterias2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

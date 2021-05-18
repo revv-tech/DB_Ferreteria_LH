@@ -7,6 +7,7 @@ Partial Class frmEmpleados
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
 
+
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -293,6 +294,7 @@ Partial Class frmEmpleados
     Friend WithEvents ModificarButton As Button
     Friend WithEvents NuevoButton As Button
 
+
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
@@ -306,5 +308,6 @@ Partial Class frmEmpleados
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Text = "frmEmpleado"
     End Sub
+
 
 End Class

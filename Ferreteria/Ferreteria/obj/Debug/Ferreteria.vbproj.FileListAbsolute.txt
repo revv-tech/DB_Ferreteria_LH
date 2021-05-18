@@ -16,3 +16,9 @@ C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmInventarios.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmLocales.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmProductos.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmIngresos.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmEmpleados.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmClientes.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmFacturas.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmTiposDeVenta.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmPedidos.resources

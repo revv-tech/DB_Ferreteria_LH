@@ -28,7 +28,8 @@
     Private Sub LocalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalesToolStripMenuItem.Click
         frmLocales.Show()
     End Sub
-<<<<<<< HEAD
+
+
 
 
     Private Sub IngresosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresosToolStripMenuItem.Click
@@ -58,9 +59,8 @@
     Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles SalirButton.Click
         Me.Close()
 
+
     Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem.Click
 
     End Sub
-=======
->>>>>>> parent of cdd7521 (Commit)
 End Class
