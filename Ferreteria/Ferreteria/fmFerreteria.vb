@@ -29,6 +29,7 @@
         frmLocales.Show()
     End Sub
 
+
     Private Sub IngresosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresosToolStripMenuItem.Click
         frmIngresos.Show()
     End Sub
@@ -55,5 +56,8 @@
 
     Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles SalirButton.Click
         Me.Close()
+
+    Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem.Click
+
     End Sub
 End Class
