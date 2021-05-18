@@ -2,11 +2,7 @@
 Partial Class frmEmpleados
     Inherits System.Windows.Forms.Form
 
-
     'Form overrides dispose to clean up the component list.
-
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
-
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -17,7 +13,6 @@ Partial Class frmEmpleados
             MyBase.Dispose(disposing)
         End Try
     End Sub
-
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -292,19 +287,4 @@ Partial Class frmEmpleados
     Friend WithEvents GuardarButton As Button
     Friend WithEvents ModificarButton As Button
     Friend WithEvents NuevoButton As Button
-
-    'Requerido por el Diseñador de Windows Forms
-    Private components As System.ComponentModel.IContainer
-
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
-    Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "frmEmpleado"
-    End Sub
-
 End Class
