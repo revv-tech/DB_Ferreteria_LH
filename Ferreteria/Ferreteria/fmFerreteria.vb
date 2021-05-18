@@ -28,4 +28,8 @@
     Private Sub LocalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalesToolStripMenuItem.Click
         frmLocales.Show()
     End Sub
+
+    Private Sub MantenimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MantenimientoToolStripMenuItem.Click
+
+    End Sub
 End Class
