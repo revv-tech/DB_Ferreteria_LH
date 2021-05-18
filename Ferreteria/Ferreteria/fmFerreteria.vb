@@ -28,4 +28,32 @@
     Private Sub LocalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalesToolStripMenuItem.Click
         frmLocales.Show()
     End Sub
+
+    Private Sub IngresosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresosToolStripMenuItem.Click
+        frmIngresos.Show()
+    End Sub
+
+    Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
+        frmEmpleados.Show()
+    End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        frmClientes.Show()
+    End Sub
+
+    Private Sub FacturasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturasToolStripMenuItem.Click
+        frmFacturas.Show()
+    End Sub
+
+    Private Sub TiposDeVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDeVentaToolStripMenuItem.Click
+        frmTiposDeVenta.Show()
+    End Sub
+
+    Private Sub PedidosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PedidosToolStripMenuItem.Click
+        frmPedidos.Show()
+    End Sub
+
+    Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles SalirButton.Click
+        Me.Close()
+    End Sub
 End Class
