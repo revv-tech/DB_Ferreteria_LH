@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmCategorias
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class frmCategorias
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategorias))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -31,11 +30,11 @@ Partial Class frmCategorias
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.SalirButton = New System.Windows.Forms.Button()
-        Me.AgregarButton = New System.Windows.Forms.Button()
-        Me.GuardarButton = New System.Windows.Forms.Button()
-        Me.ModificarButton = New System.Windows.Forms.Button()
-        Me.NuevoButton = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -60,7 +59,7 @@ Partial Class frmCategorias
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(429, 6)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 16)
+        Me.Label3.Size = New System.Drawing.Size(92, 16)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Descripción" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -86,7 +85,7 @@ Partial Class frmCategorias
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(74, 6)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 16)
+        Me.Label2.Size = New System.Drawing.Size(78, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Categoría"
         '
@@ -96,7 +95,7 @@ Partial Class frmCategorias
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(20, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(23, 16)
+        Me.Label1.Size = New System.Drawing.Size(25, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -109,82 +108,75 @@ Partial Class frmCategorias
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.NuevoButton)
-        Me.GroupBox2.Controls.Add(Me.SalirButton)
-        Me.GroupBox2.Controls.Add(Me.AgregarButton)
-        Me.GroupBox2.Controls.Add(Me.GuardarButton)
-        Me.GroupBox2.Controls.Add(Me.ModificarButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 163)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 150)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
-        Me.GroupBox2.TabIndex = 22
+        Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
-        'SalirButton
+        'Button5
         '
-        Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(645, 26)
-        Me.SalirButton.Name = "SalirButton"
-        Me.SalirButton.Size = New System.Drawing.Size(100, 101)
-        Me.SalirButton.TabIndex = 4
-        Me.SalirButton.UseVisualStyleBackColor = True
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.Location = New System.Drawing.Point(635, 39)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(101, 72)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Salir"
+        Me.Button5.UseVisualStyleBackColor = True
         '
-        'AgregarButton
+        'Button4
         '
-        Me.AgregarButton.BackColor = System.Drawing.SystemColors.Control
-        Me.AgregarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.AgregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AgregarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
-        Me.AgregarButton.Location = New System.Drawing.Point(339, 23)
-        Me.AgregarButton.Name = "AgregarButton"
-        Me.AgregarButton.Size = New System.Drawing.Size(103, 107)
-        Me.AgregarButton.TabIndex = 3
-        Me.AgregarButton.UseVisualStyleBackColor = False
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.Location = New System.Drawing.Point(330, 39)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(101, 72)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "Borrar"
+        Me.Button4.UseVisualStyleBackColor = True
         '
-        'GuardarButton
+        'Button3
         '
-        Me.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GuardarButton.Image = Global.Ferreteria.My.Resources.Resources.disco_flexible
-        Me.GuardarButton.Location = New System.Drawing.Point(223, 23)
-        Me.GuardarButton.Name = "GuardarButton"
-        Me.GuardarButton.Size = New System.Drawing.Size(110, 107)
-        Me.GuardarButton.TabIndex = 2
-        Me.GuardarButton.UseVisualStyleBackColor = True
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.Location = New System.Drawing.Point(223, 37)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(101, 72)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Guardar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'ModificarButton
+        'Button2
         '
-        Me.ModificarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ModificarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ModificarButton.Image = Global.Ferreteria.My.Resources.Resources.editar
-        Me.ModificarButton.Location = New System.Drawing.Point(116, 23)
-        Me.ModificarButton.Name = "ModificarButton"
-        Me.ModificarButton.Size = New System.Drawing.Size(101, 107)
-        Me.ModificarButton.TabIndex = 1
-        Me.ModificarButton.UseVisualStyleBackColor = True
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.Location = New System.Drawing.Point(116, 37)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 72)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Modificar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'NuevoButton
+        'Button1
         '
-        Me.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.NuevoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NuevoButton.Image = Global.Ferreteria.My.Resources.Resources.new3
-        Me.NuevoButton.Location = New System.Drawing.Point(9, 23)
-        Me.NuevoButton.Name = "NuevoButton"
-        Me.NuevoButton.Size = New System.Drawing.Size(101, 107)
-        Me.NuevoButton.TabIndex = 6
-        Me.NuevoButton.UseVisualStyleBackColor = True
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Location = New System.Drawing.Point(6, 37)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 72)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Nuevo"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(765, 325)
+        Me.ClientSize = New System.Drawing.Size(800, 325)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCategorias"
         Me.Text = "Categorias"
         Me.GroupBox1.ResumeLayout(False)
@@ -202,9 +194,9 @@ Partial Class frmCategorias
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents SalirButton As Button
-    Friend WithEvents AgregarButton As Button
-    Friend WithEvents GuardarButton As Button
-    Friend WithEvents ModificarButton As Button
-    Friend WithEvents NuevoButton As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class
