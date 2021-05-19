@@ -73,12 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmClientes.Designer.vb">
-      <DependentUpon>frmClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    
     <Compile Include="frmCategorias.Designer.vb">
       <DependentUpon>frmCategorias.vb</DependentUpon>
     </Compile>
@@ -92,6 +87,14 @@
       <DependentUpon>fmFerreteria.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Include="frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+
     <Compile Include="frmEmpleados.Designer.vb">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
@@ -110,7 +113,6 @@
     <Compile Include="frmIngresos.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="frmInventarios.Designer.vb">
       <DependentUpon>frmInventarios.vb</DependentUpon>
     </Compile>
@@ -147,13 +149,12 @@
     <Compile Include="frmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTipoVenta.Designer.vb">
-      <DependentUpon>frmTipoVenta.vb</DependentUpon>
+    <Compile Include="frmTiposDeVenta.Designer.vb">
+      <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmTipoVenta.vb">
+    <Compile Include="frmTiposDeVenta.vb">
 
-      <SubType>Form</SubType>
-    </Compile>
+
 
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +217,13 @@
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.vb</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="frmTiposDeVenta.resx">
       <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
     <EmbeddedResource Include="frmTipoVenta.resx">
       <DependentUpon>frmTipoVenta.vb</DependentUpon>
     </EmbeddedResource>
+
 
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -53,9 +53,6 @@ Partial Class fmFerreteria
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
 
-
-
-
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
