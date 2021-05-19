@@ -6,6 +6,7 @@ Partial Class frmIngresos
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
 
+
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmIngresos
     Inherits System.Windows.Forms.Form
@@ -312,5 +313,6 @@ Partial Class frmIngresos
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Text = "frmIngresos"
     End Sub
+
 
 End Class

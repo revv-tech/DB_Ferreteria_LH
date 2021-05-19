@@ -3,20 +3,11 @@ Partial Class frmFacturas
     Inherits System.Windows.Forms.Form
 
 
+
     'Form overrides dispose to clean up the component list.
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
 
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
 
 
     'Required by the Windows Form Designer
@@ -413,6 +404,7 @@ Partial Class frmFacturas
     Friend WithEvents ModificarButton As Button
     Friend WithEvents NuevoButton As Button
 
+
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
@@ -426,5 +418,6 @@ Partial Class frmFacturas
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Text = "frmFacturas"
     End Sub
+
 
 End Class
