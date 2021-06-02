@@ -146,12 +146,20 @@
     <Compile Include="frmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSelectTable.Designer.vb">
+      <DependentUpon>frmSelectTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTiposDeVenta.Designer.vb">
       <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTiposDeVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funciones.vb" />
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -167,6 +175,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Propiedades.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="fmFerreteria.resx">
@@ -204,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectTable.resx">
+      <DependentUpon>frmSelectTable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeVenta.resx">
       <DependentUpon>frmTiposDeVenta.vb</DependentUpon>

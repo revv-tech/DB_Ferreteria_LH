@@ -2,7 +2,6 @@ C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.exe
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.pdb
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\Ferreteria.xml
-C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbprojAssemblyReference.cache
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.fmFerreteria.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Resources.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.GenerateResource.cache
@@ -22,3 +21,5 @@ C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmFacturas.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmTiposDeVenta.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmPedidos.resources
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.AssemblyReference.cache
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmSelectTable.resources

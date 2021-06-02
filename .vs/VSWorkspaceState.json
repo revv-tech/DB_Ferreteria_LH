@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ferreteria"
+    "\\Ferreteria",
+    "\\Ferreteria\\Ferreteria"
   ],
-  "SelectedNode": "\\Ferreteria\\Ferreteria.sln",
+  "SelectedNode": "\\Ferreteria\\Ferreteria\\frmProductos.vb",
   "PreviewInSolutionExplorer": false
 }
