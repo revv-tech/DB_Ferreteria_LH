@@ -146,10 +146,10 @@
     <Compile Include="frmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelectTable.Designer.vb">
-      <DependentUpon>frmSelectTable.vb</DependentUpon>
+    <Compile Include="frmSelectSpTable.Designer.vb">
+      <DependentUpon>frmSelectSpTable.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSelectTable.vb">
+    <Compile Include="frmSelectSpTable.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTiposDeVenta.Designer.vb">
@@ -214,8 +214,8 @@
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelectTable.resx">
-      <DependentUpon>frmSelectTable.vb</DependentUpon>
+    <EmbeddedResource Include="frmSelectSpTable.resx">
+      <DependentUpon>frmSelectSpTable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiposDeVenta.resx">
       <DependentUpon>frmTiposDeVenta.vb</DependentUpon>
