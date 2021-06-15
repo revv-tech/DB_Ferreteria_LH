@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class fmFerreteria
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class fmFerreteria
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmFerreteria))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -42,7 +42,9 @@ Partial Class fmFerreteria
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -50,7 +52,7 @@ Partial Class fmFerreteria
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MantenimientoToolStripMenuItem, Me.FacturaciónToolStripMenuItem, Me.ConsultasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1123, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(771, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -64,73 +66,73 @@ Partial Class fmFerreteria
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'LocalesToolStripMenuItem
         '
         Me.LocalesToolStripMenuItem.Name = "LocalesToolStripMenuItem"
-        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.LocalesToolStripMenuItem.Text = "Locales"
         '
         'MedidasToolStripMenuItem
         '
         Me.MedidasToolStripMenuItem.Name = "MedidasToolStripMenuItem"
-        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.MedidasToolStripMenuItem.Text = "Medidas"
         '
         'InventariosToolStripMenuItem
         '
         Me.InventariosToolStripMenuItem.Name = "InventariosToolStripMenuItem"
-        Me.InventariosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.InventariosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.InventariosToolStripMenuItem.Text = "Inventarios"
         '
         'IngresosToolStripMenuItem
         '
         Me.IngresosToolStripMenuItem.Name = "IngresosToolStripMenuItem"
-        Me.IngresosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.IngresosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.IngresosToolStripMenuItem.Text = "Ingresos"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'FacturasToolStripMenuItem
         '
         Me.FacturasToolStripMenuItem.Name = "FacturasToolStripMenuItem"
-        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.FacturasToolStripMenuItem.Text = "Facturas"
         '
         'TiposDeVentaToolStripMenuItem
         '
         Me.TiposDeVentaToolStripMenuItem.Name = "TiposDeVentaToolStripMenuItem"
-        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.TiposDeVentaToolStripMenuItem.Text = "Tipos de Venta"
+        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.TiposDeVentaToolStripMenuItem.Text = "Tipo de Pago"
         '
         'PedidosToolStripMenuItem
         '
         Me.PedidosToolStripMenuItem.Name = "PedidosToolStripMenuItem"
-        Me.PedidosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.PedidosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.PedidosToolStripMenuItem.Text = "Pedidos"
         '
         'FacturaciónToolStripMenuItem
@@ -163,11 +165,22 @@ Partial Class fmFerreteria
         Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(1011, 545)
+        Me.SalirButton.Location = New System.Drawing.Point(664, 337)
         Me.SalirButton.Name = "SalirButton"
         Me.SalirButton.Size = New System.Drawing.Size(100, 101)
         Me.SalirButton.TabIndex = 5
         Me.SalirButton.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.Ferreteria.My.Resources.Resources.title
+        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(160, 64)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(473, 301)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'fmFerreteria
         '
@@ -175,7 +188,8 @@ Partial Class fmFerreteria
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Ferreteria.My.Resources.Resources.Nombres_para_Ferreterias2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(1123, 658)
+        Me.ClientSize = New System.Drawing.Size(771, 459)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.SalirButton)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -184,6 +198,7 @@ Partial Class fmFerreteria
         Me.Text = "Ferreteria Los Hermanos"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,4 +223,5 @@ Partial Class fmFerreteria
     Friend WithEvents TiposDeVentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PedidosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirButton As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

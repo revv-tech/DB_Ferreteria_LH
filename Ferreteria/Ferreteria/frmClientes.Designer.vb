@@ -22,42 +22,59 @@ Partial Class frmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Tel_Tbx = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Correo_Tbx = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Dir_Tbx = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Nombre_Tbx = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ID_tbx = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.NuevoButton = New System.Windows.Forms.Button()
         Me.SalirButton = New System.Windows.Forms.Button()
-        Me.AgregarButton = New System.Windows.Forms.Button()
-        Me.GuardarButton = New System.Windows.Forms.Button()
+        Me.EliminarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.FerreteriaLosHermanosDataSet = New Ferreteria.FerreteriaLosHermanosDataSet()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClientesTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.ClientesTableAdapter()
+        Me.ClienteIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FrmClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FrmClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.Tel_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.Correo_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.Dir_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Nombre_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.ID_tbx)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(752, 270)
@@ -74,12 +91,12 @@ Partial Class frmClientes
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Tel."
         '
-        'TextBox5
+        'Tel_Tbx
         '
-        Me.TextBox5.Location = New System.Drawing.Point(539, 187)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox5.TabIndex = 10
+        Me.Tel_Tbx.Location = New System.Drawing.Point(539, 187)
+        Me.Tel_Tbx.Name = "Tel_Tbx"
+        Me.Tel_Tbx.Size = New System.Drawing.Size(206, 20)
+        Me.Tel_Tbx.TabIndex = 10
         '
         'Label5
         '
@@ -91,12 +108,12 @@ Partial Class frmClientes
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Correo"
         '
-        'TextBox4
+        'Correo_Tbx
         '
-        Me.TextBox4.Location = New System.Drawing.Point(87, 186)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(394, 20)
-        Me.TextBox4.TabIndex = 8
+        Me.Correo_Tbx.Location = New System.Drawing.Point(87, 186)
+        Me.Correo_Tbx.Name = "Correo_Tbx"
+        Me.Correo_Tbx.Size = New System.Drawing.Size(394, 20)
+        Me.Correo_Tbx.TabIndex = 8
         '
         'Label4
         '
@@ -108,13 +125,13 @@ Partial Class frmClientes
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Dirección"
         '
-        'TextBox3
+        'Dir_Tbx
         '
-        Me.TextBox3.Location = New System.Drawing.Point(87, 67)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(658, 91)
-        Me.TextBox3.TabIndex = 6
+        Me.Dir_Tbx.Location = New System.Drawing.Point(87, 67)
+        Me.Dir_Tbx.Multiline = True
+        Me.Dir_Tbx.Name = "Dir_Tbx"
+        Me.Dir_Tbx.Size = New System.Drawing.Size(658, 91)
+        Me.Dir_Tbx.TabIndex = 6
         '
         'Label3
         '
@@ -126,12 +143,12 @@ Partial Class frmClientes
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre del Cliente"
         '
-        'TextBox2
+        'Nombre_Tbx
         '
-        Me.TextBox2.Location = New System.Drawing.Point(368, 32)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(368, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.Nombre_Tbx.Location = New System.Drawing.Point(368, 32)
+        Me.Nombre_Tbx.Name = "Nombre_Tbx"
+        Me.Nombre_Tbx.Size = New System.Drawing.Size(368, 20)
+        Me.Nombre_Tbx.TabIndex = 3
         '
         'Label2
         '
@@ -154,25 +171,57 @@ Partial Class frmClientes
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'TextBox1
+        'ID_tbx
         '
-        Me.TextBox1.Location = New System.Drawing.Point(37, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.ID_tbx.Location = New System.Drawing.Point(37, 32)
+        Me.ID_tbx.Name = "ID_tbx"
+        Me.ID_tbx.Size = New System.Drawing.Size(140, 20)
+        Me.ID_tbx.TabIndex = 0
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.NuevoButton)
         Me.GroupBox2.Controls.Add(Me.SalirButton)
-        Me.GroupBox2.Controls.Add(Me.AgregarButton)
-        Me.GroupBox2.Controls.Add(Me.GuardarButton)
+        Me.GroupBox2.Controls.Add(Me.EliminarButton)
         Me.GroupBox2.Controls.Add(Me.ModificarButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 288)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 288)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
-        Me.GroupBox2.TabIndex = 21
+        Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(138, 131)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(72, 16)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "Modificar"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(30, 131)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 16)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "Insertar"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(235, 133)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 16)
+        Me.Label10.TabIndex = 6
+        Me.Label10.Text = "Eliminar"
         '
         'NuevoButton
         '
@@ -196,28 +245,17 @@ Partial Class frmClientes
         Me.SalirButton.TabIndex = 4
         Me.SalirButton.UseVisualStyleBackColor = True
         '
-        'AgregarButton
+        'EliminarButton
         '
-        Me.AgregarButton.BackColor = System.Drawing.SystemColors.Control
-        Me.AgregarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.AgregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AgregarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
-        Me.AgregarButton.Location = New System.Drawing.Point(339, 23)
-        Me.AgregarButton.Name = "AgregarButton"
-        Me.AgregarButton.Size = New System.Drawing.Size(103, 107)
-        Me.AgregarButton.TabIndex = 3
-        Me.AgregarButton.UseVisualStyleBackColor = False
-        '
-        'GuardarButton
-        '
-        Me.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.GuardarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GuardarButton.Image = Global.Ferreteria.My.Resources.Resources.disco_flexible
-        Me.GuardarButton.Location = New System.Drawing.Point(223, 23)
-        Me.GuardarButton.Name = "GuardarButton"
-        Me.GuardarButton.Size = New System.Drawing.Size(110, 107)
-        Me.GuardarButton.TabIndex = 2
-        Me.GuardarButton.UseVisualStyleBackColor = True
+        Me.EliminarButton.BackColor = System.Drawing.SystemColors.Control
+        Me.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EliminarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
+        Me.EliminarButton.Location = New System.Drawing.Point(223, 23)
+        Me.EliminarButton.Name = "EliminarButton"
+        Me.EliminarButton.Size = New System.Drawing.Size(103, 107)
+        Me.EliminarButton.TabIndex = 3
+        Me.EliminarButton.UseVisualStyleBackColor = False
         '
         'ModificarButton
         '
@@ -230,11 +268,72 @@ Partial Class frmClientes
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClienteIDDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.ClientesBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(771, 18)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(546, 417)
+        Me.DataGridView1.TabIndex = 25
+        '
+        'FerreteriaLosHermanosDataSet
+        '
+        Me.FerreteriaLosHermanosDataSet.DataSetName = "FerreteriaLosHermanosDataSet"
+        Me.FerreteriaLosHermanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.FerreteriaLosHermanosDataSet
+        '
+        'ClientesTableAdapter
+        '
+        Me.ClientesTableAdapter.ClearBeforeFill = True
+        '
+        'ClienteIDDataGridViewTextBoxColumn
+        '
+        Me.ClienteIDDataGridViewTextBoxColumn.DataPropertyName = "ClienteID"
+        Me.ClienteIDDataGridViewTextBoxColumn.HeaderText = "ClienteID"
+        Me.ClienteIDDataGridViewTextBoxColumn.Name = "ClienteIDDataGridViewTextBoxColumn"
+        Me.ClienteIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'CorreoDataGridViewTextBoxColumn
+        '
+        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "Correo"
+        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "Correo"
+        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'FrmClientesBindingSource
+        '
+        Me.FrmClientesBindingSource.DataSource = GetType(Ferreteria.frmClientes)
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 450)
+        Me.ClientSize = New System.Drawing.Size(1321, 450)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -243,25 +342,42 @@ Partial Class frmClientes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FrmClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Tel_Tbx As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Correo_Tbx As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Dir_Tbx As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Nombre_Tbx As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ID_tbx As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents SalirButton As Button
-    Friend WithEvents AgregarButton As Button
-    Friend WithEvents GuardarButton As Button
-    Friend WithEvents ModificarButton As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
     Friend WithEvents NuevoButton As Button
+    Friend WithEvents SalirButton As Button
+    Friend WithEvents EliminarButton As Button
+    Friend WithEvents ModificarButton As Button
+    Friend WithEvents FrmClientesBindingSource As BindingSource
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents FerreteriaLosHermanosDataSet As FerreteriaLosHermanosDataSet
+    Friend WithEvents ClientesBindingSource As BindingSource
+    Friend WithEvents ClientesTableAdapter As FerreteriaLosHermanosDataSetTableAdapters.ClientesTableAdapter
+    Friend WithEvents ClienteIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CorreoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

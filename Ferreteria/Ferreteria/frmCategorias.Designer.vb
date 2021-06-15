@@ -22,6 +22,7 @@ Partial Class frmCategorias
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategorias))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,12 +41,21 @@ Partial Class frmCategorias
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.CategoriasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FerreteriaLosHermanosDataSet2 = New Ferreteria.FerreteriaLosHermanosDataSet2()
+        Me.CategoriasTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.CategoriasTableAdapter()
+        Me.Categoria_cbx = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.CategoriasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FerreteriaLosHermanosDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Categoria_cbx)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Descrip_tbx)
         Me.GroupBox1.Controls.Add(Me.Nombre_Tbx)
@@ -54,7 +64,7 @@ Partial Class frmCategorias
         Me.GroupBox1.Controls.Add(Me.ID_txb)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(752, 140)
+        Me.GroupBox1.Size = New System.Drawing.Size(752, 170)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -122,7 +132,7 @@ Partial Class frmCategorias
         Me.GroupBox2.Controls.Add(Me.EliminarButton)
         Me.GroupBox2.Controls.Add(Me.SeleccionarButton)
         Me.GroupBox2.Controls.Add(Me.ModificarButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 163)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 179)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
         Me.GroupBox2.TabIndex = 22
@@ -224,12 +234,46 @@ Partial Class frmCategorias
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'CategoriasBindingSource
+        '
+        Me.CategoriasBindingSource.DataMember = "Categorias"
+        Me.CategoriasBindingSource.DataSource = Me.FerreteriaLosHermanosDataSet2
+        '
+        'FerreteriaLosHermanosDataSet2
+        '
+        Me.FerreteriaLosHermanosDataSet2.DataSetName = "FerreteriaLosHermanosDataSet2"
+        Me.FerreteriaLosHermanosDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CategoriasTableAdapter
+        '
+        Me.CategoriasTableAdapter.ClearBeforeFill = True
+        '
+        'Categoria_cbx
+        '
+        Me.Categoria_cbx.DisplayMember = "Nombre"
+        Me.Categoria_cbx.FormattingEnabled = True
+        Me.Categoria_cbx.Location = New System.Drawing.Point(136, 143)
+        Me.Categoria_cbx.Name = "Categoria_cbx"
+        Me.Categoria_cbx.Size = New System.Drawing.Size(600, 21)
+        Me.Categoria_cbx.TabIndex = 36
+        Me.Categoria_cbx.ValueMember = "LocalID"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(6, 144)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(124, 16)
+        Me.Label8.TabIndex = 35
+        Me.Label8.Text = "Ver Descrip.  de:"
+        '
         'frmCategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(756, 315)
+        Me.ClientSize = New System.Drawing.Size(763, 334)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -239,6 +283,8 @@ Partial Class frmCategorias
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.CategoriasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FerreteriaLosHermanosDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -260,4 +306,9 @@ Partial Class frmCategorias
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents FerreteriaLosHermanosDataSet2 As FerreteriaLosHermanosDataSet2
+    Friend WithEvents CategoriasBindingSource As BindingSource
+    Friend WithEvents CategoriasTableAdapter As FerreteriaLosHermanosDataSet2TableAdapters.CategoriasTableAdapter
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Categoria_cbx As ComboBox
 End Class

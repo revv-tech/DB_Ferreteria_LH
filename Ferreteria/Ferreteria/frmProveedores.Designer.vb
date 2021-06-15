@@ -22,6 +22,7 @@ Partial Class frmProveedores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedores))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -45,12 +46,23 @@ Partial Class frmProveedores
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.ProveedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FerreteriaLosHermanosDataSet1 = New Ferreteria.FerreteriaLosHermanosDataSet1()
+        Me.ProveedoresTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.ProveedoresTableAdapter()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Proveedor_cbx = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FerreteriaLosHermanosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Proveedor_cbx)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Tel_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -278,11 +290,54 @@ Partial Class frmProveedores
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'ProveedoresBindingSource
+        '
+        Me.ProveedoresBindingSource.DataMember = "Proveedores"
+        Me.ProveedoresBindingSource.DataSource = Me.FerreteriaLosHermanosDataSet1
+        '
+        'FerreteriaLosHermanosDataSet1
+        '
+        Me.FerreteriaLosHermanosDataSet1.DataSetName = "FerreteriaLosHermanosDataSet1"
+        Me.FerreteriaLosHermanosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(1125, 455)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView2.TabIndex = 25
+        '
+        'Proveedor_cbx
+        '
+        Me.Proveedor_cbx.DisplayMember = "Nombre"
+        Me.Proveedor_cbx.FormattingEnabled = True
+        Me.Proveedor_cbx.Location = New System.Drawing.Point(130, 243)
+        Me.Proveedor_cbx.Name = "Proveedor_cbx"
+        Me.Proveedor_cbx.Size = New System.Drawing.Size(606, 21)
+        Me.Proveedor_cbx.TabIndex = 32
+        Me.Proveedor_cbx.ValueMember = "LocalID"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(10, 244)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(103, 16)
+        Me.Label11.TabIndex = 31
+        Me.Label11.Text = "Ver Datos de:"
+        '
         'frmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(775, 450)
+        Me.ClientSize = New System.Drawing.Size(772, 450)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -292,6 +347,9 @@ Partial Class frmProveedores
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FerreteriaLosHermanosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -318,4 +376,10 @@ Partial Class frmProveedores
     Friend WithEvents EliminarButton As Button
     Friend WithEvents SeleccionarButton As Button
     Friend WithEvents ModificarButton As Button
+    Friend WithEvents FerreteriaLosHermanosDataSet1 As FerreteriaLosHermanosDataSet1
+    Friend WithEvents ProveedoresBindingSource As BindingSource
+    Friend WithEvents ProveedoresTableAdapter As FerreteriaLosHermanosDataSet1TableAdapters.ProveedoresTableAdapter
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Proveedor_cbx As ComboBox
+    Friend WithEvents Label11 As Label
 End Class

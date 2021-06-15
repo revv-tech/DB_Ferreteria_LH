@@ -22,4 +22,3 @@ C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmTiposDeVenta.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmPedidos.resources
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.AssemblyReference.cache
-C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.frmSelectSpTable.resources

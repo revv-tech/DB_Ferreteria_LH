@@ -82,5 +82,535 @@ Ferreteria
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Ferreteria.My.Resources.Resources.search">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.title">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1.ProveedoresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1.ProveedoresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1.ProveedoresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.ProveedoresTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2.CategoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2.CategoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2.CategoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.CategoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet2)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3.LocalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3.LocalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3.LocalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.LocalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet3)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4.LocalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4.LocalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4.LocalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.LocalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet4,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet4)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet4TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5.sp_SeleccionarLocalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5.sp_SeleccionarLocalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5.sp_SeleccionarLocalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.sp_SeleccionarLocalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet5,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet5,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet5,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet5)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6.sp_SeleccionarLocalesIDDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6.sp_SeleccionarLocalesIDRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6.sp_SeleccionarLocalesIDRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.sp_SeleccionarLocalesIDTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet6,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet6,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet6,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet6)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7.LocalesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7.LocalesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7.LocalesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.LocalesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.UpdateUpdatedRows(Ferreteria.FerreteriaLosHermanosDataSet7,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.UpdateInsertedRows(Ferreteria.FerreteriaLosHermanosDataSet7,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.UpdateDeletedRows(Ferreteria.FerreteriaLosHermanosDataSet7,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.UpdateAll(Ferreteria.FerreteriaLosHermanosDataSet7)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>
