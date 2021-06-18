@@ -25,6 +25,8 @@ Partial Class frmProveedores
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedores))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Proveedor_cbx = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Tel_Tbx = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -50,8 +52,6 @@ Partial Class frmProveedores
         Me.FerreteriaLosHermanosDataSet1 = New Ferreteria.FerreteriaLosHermanosDataSet1()
         Me.ProveedoresTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet1TableAdapters.ProveedoresTableAdapter()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Proveedor_cbx = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +79,26 @@ Partial Class frmProveedores
         Me.GroupBox1.Size = New System.Drawing.Size(752, 270)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'Proveedor_cbx
+        '
+        Me.Proveedor_cbx.DisplayMember = "Nombre"
+        Me.Proveedor_cbx.FormattingEnabled = True
+        Me.Proveedor_cbx.Location = New System.Drawing.Point(130, 243)
+        Me.Proveedor_cbx.Name = "Proveedor_cbx"
+        Me.Proveedor_cbx.Size = New System.Drawing.Size(606, 21)
+        Me.Proveedor_cbx.TabIndex = 32
+        Me.Proveedor_cbx.ValueMember = "LocalID"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(10, 244)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(103, 16)
+        Me.Label11.TabIndex = 31
+        Me.Label11.Text = "Ver Datos de:"
         '
         'Label6
         '
@@ -311,26 +331,6 @@ Partial Class frmProveedores
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView2.TabIndex = 25
-        '
-        'Proveedor_cbx
-        '
-        Me.Proveedor_cbx.DisplayMember = "Nombre"
-        Me.Proveedor_cbx.FormattingEnabled = True
-        Me.Proveedor_cbx.Location = New System.Drawing.Point(130, 243)
-        Me.Proveedor_cbx.Name = "Proveedor_cbx"
-        Me.Proveedor_cbx.Size = New System.Drawing.Size(606, 21)
-        Me.Proveedor_cbx.TabIndex = 32
-        Me.Proveedor_cbx.ValueMember = "LocalID"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(10, 244)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(103, 16)
-        Me.Label11.TabIndex = 31
-        Me.Label11.Text = "Ver Datos de:"
         '
         'frmProveedores
         '

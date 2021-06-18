@@ -183,7 +183,8 @@ Public Class frmProductos
         Else
             MessageBox.Show("Debe ingresar los datos de la producto a insertar", "Insertando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
+        Proveedor_cbx.Text = ""
+        llenarComboProductos()
     End Sub
 
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
@@ -204,6 +205,8 @@ Public Class frmProductos
         Else
             MessageBox.Show("Debe ingresar el ID de un Producto", "Eliminado Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        Proveedor_cbx.Text = ""
+        llenarComboProductos()
     End Sub
 
     Private Sub SalirButton_Click_1(sender As Object, e As EventArgs) Handles SalirButton.Click
@@ -219,29 +222,102 @@ Public Class frmProductos
         Using (sqlCon)
 
             If Productos_cbx.SelectedIndex > -1 Then
-                Dim n As Integer
+                Dim n, x, y As Integer
                 n = 0
+                x = 0
+                y = 0
                 Dim sqlComm As New SqlCommand()
                 'se hace la referencia a la conexión con la bd'
                 sqlComm.Connection = sqlCon
                 'se indica el nombre del stored procedure y el tipo'
                 sqlCon.Open()
                 sqlComm.CommandText = "sp_SeleccionarProductosID" '
-                sqlComm.Parameters.AddWithValue("@ID", Productos_cbx.SelectedIndex + 1)
+                sqlComm.Parameters.AddWithValue("@ID", Productos_cbx.SelectedValue)
                 'Tipo de comando'
                 sqlComm.CommandType = CommandType.StoredProcedure
                 Dim dataR As SqlDataReader
                 dataR = sqlComm.ExecuteReader()
 
                 If dataR.Read() Then
+                    ID_Txb.Text = dataR.GetSqlInt32(0)
+                    n = dataR.GetInt32(1)
+                    x = dataR.GetInt32(2)
+                    y = dataR.GetInt32(3)
+                    Nombre_Tbx.Text = dataR.GetSqlString(4)
+                    Precio_Tbx.Text = dataR.GetSqlInt32(5)
 
-                    Nombre_Tbx.Text = dataR.GetSqlString(1)
-                    Productos_cbx.Text = dataR.GetSqlString(2)
-                    MedidaCbx.Text = dataR.GetSqlString(3)
-                    Precio_Tbx.Text = dataR.GetSqlString(4)
+                    dataR.Close()
+                    sqlComm.Parameters.Clear()
+                    sqlComm.CommandText = "sp_SeleccionarProveedoresID"
+                    sqlComm.Parameters.AddWithValue("@ID", n)
+                    Dim dataAux As SqlDataReader
+                    dataAux = sqlComm.ExecuteReader()
+
+                    If dataAux.Read() Then
+                        Proveedor_cbx.Text = dataAux.GetSqlString(1)
+                    End If
+
+                    dataAux.Close()
+                    sqlComm.Parameters.Clear()
+                    sqlComm.CommandText = "sp_SeleccionarCategoriasID"
+                    sqlComm.Parameters.AddWithValue("@ID", x)
+                    Dim dataAux2 As SqlDataReader
+                    dataAux2 = sqlComm.ExecuteReader()
+
+                    If dataAux2.Read() Then
+                        CategoriaCbx.Text = dataAux2.GetSqlString(1)
+                    End If
+
+                    dataAux2.Close()
+                    sqlComm.Parameters.Clear()
+                    sqlComm.CommandText = "sp_SeleccionarMedidasID"
+
+                    sqlComm.Parameters.AddWithValue("@ID", y)
+                    Dim dataAux3 As SqlDataReader
+                    dataAux3 = sqlComm.ExecuteReader()
+
+                    If dataAux3.Read() Then
+                        MedidaCbx.Text = dataAux3.GetSqlString(1)
+                    End If
+
+
                 End If
             End If
         End Using
 
+    End Sub
+
+    Private Sub ModificarButton_Click(sender As Object, e As EventArgs) Handles ModificarButton.Click
+        If (Me.ValidateChildren = True And Nombre_Tbx.Text <> "") And (Me.ValidateChildren = True And Proveedor_cbx.Text <> "") And (Me.ValidateChildren = True And CategoriaCbx.Text <> "") And (Me.ValidateChildren = True And Precio_Tbx.Text <> "") Then
+            Try
+                ep.id_ = ID_Txb.Text
+                ep.Precio_Producto = Precio_Tbx.Text
+                ep.Nombre_ = Nombre_Tbx.Text
+                ep.CategoriaID = CategoriaCbx.SelectedValue
+                ep.MedidaID = MedidaCbx.SelectedValue
+                ep.ProveedorID = Proveedor_cbx.SelectedValue
+
+
+                If func.Modificar_Productos("sp_ModificarProductos", ep) Then
+                    MessageBox.Show("Producto modificado correctamente!", "Modificando Producto...")
+                    Proveedor_cbx.Text = ""
+                    Precio_Tbx.Text = ""
+                    CategoriaCbx.Text = ""
+                    MedidaCbx.Text = ""
+                    Nombre_Tbx.Text = ""
+                Else
+                    MessageBox.Show("Producto no encontrado!", "Modificando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Proveedor_cbx.Text = ""
+                    Precio_Tbx.Text = ""
+                    CategoriaCbx.Text = ""
+                    MedidaCbx.Text = ""
+                    Nombre_Tbx.Text = ""
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Debe ingresar el ID de un producto", "Modificando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class

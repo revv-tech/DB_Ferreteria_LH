@@ -25,6 +25,8 @@ Partial Class frmClientes
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Cliente_cbx = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Tel_Tbx = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,6 +39,8 @@ Partial Class frmClientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ID_tbx = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -44,26 +48,21 @@ Partial Class frmClientes
         Me.SalirButton = New System.Windows.Forms.Button()
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.FerreteriaLosHermanosDataSet = New Ferreteria.FerreteriaLosHermanosDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FerreteriaLosHermanosDataSet = New Ferreteria.FerreteriaLosHermanosDataSet()
         Me.ClientesTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSetTableAdapters.ClientesTableAdapter()
-        Me.ClienteIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FrmClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrmClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Cliente_cbx)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Tel_Tbx)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -80,6 +79,26 @@ Partial Class frmClientes
         Me.GroupBox1.Size = New System.Drawing.Size(752, 270)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
+        '
+        'Cliente_cbx
+        '
+        Me.Cliente_cbx.DisplayMember = "Nombre"
+        Me.Cliente_cbx.FormattingEnabled = True
+        Me.Cliente_cbx.Location = New System.Drawing.Point(130, 243)
+        Me.Cliente_cbx.Name = "Cliente_cbx"
+        Me.Cliente_cbx.Size = New System.Drawing.Size(606, 21)
+        Me.Cliente_cbx.TabIndex = 34
+        Me.Cliente_cbx.ValueMember = "LocalID"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(10, 244)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(103, 16)
+        Me.Label11.TabIndex = 33
+        Me.Label11.Text = "Ver Datos de:"
         '
         'Label6
         '
@@ -180,6 +199,8 @@ Partial Class frmClientes
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.SeleccionarButton)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -192,6 +213,27 @@ Partial Class frmClientes
         Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
         Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(229, 134)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(91, 16)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Seleccionar"
+        '
+        'SeleccionarButton
+        '
+        Me.SeleccionarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.SeleccionarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SeleccionarButton.Image = Global.Ferreteria.My.Resources.Resources.disco_flexible
+        Me.SeleccionarButton.Location = New System.Drawing.Point(223, 23)
+        Me.SeleccionarButton.Name = "SeleccionarButton"
+        Me.SeleccionarButton.Size = New System.Drawing.Size(110, 107)
+        Me.SeleccionarButton.TabIndex = 25
+        Me.SeleccionarButton.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -217,7 +259,7 @@ Partial Class frmClientes
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(235, 133)
+        Me.Label10.Location = New System.Drawing.Point(353, 133)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 16)
         Me.Label10.TabIndex = 6
@@ -251,7 +293,7 @@ Partial Class frmClientes
         Me.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EliminarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
-        Me.EliminarButton.Location = New System.Drawing.Point(223, 23)
+        Me.EliminarButton.Location = New System.Drawing.Point(339, 23)
         Me.EliminarButton.Name = "EliminarButton"
         Me.EliminarButton.Size = New System.Drawing.Size(103, 107)
         Me.EliminarButton.TabIndex = 3
@@ -268,61 +310,19 @@ Partial Class frmClientes
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'ClientesBindingSource
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClienteIDDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.ClientesBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(771, 18)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(546, 417)
-        Me.DataGridView1.TabIndex = 25
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.FerreteriaLosHermanosDataSet
         '
         'FerreteriaLosHermanosDataSet
         '
         Me.FerreteriaLosHermanosDataSet.DataSetName = "FerreteriaLosHermanosDataSet"
         Me.FerreteriaLosHermanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ClientesBindingSource
-        '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me.FerreteriaLosHermanosDataSet
-        '
         'ClientesTableAdapter
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
-        '
-        'ClienteIDDataGridViewTextBoxColumn
-        '
-        Me.ClienteIDDataGridViewTextBoxColumn.DataPropertyName = "ClienteID"
-        Me.ClienteIDDataGridViewTextBoxColumn.HeaderText = "ClienteID"
-        Me.ClienteIDDataGridViewTextBoxColumn.Name = "ClienteIDDataGridViewTextBoxColumn"
-        Me.ClienteIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        '
-        'CorreoDataGridViewTextBoxColumn
-        '
-        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "Correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "Correo"
-        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
         '
         'FrmClientesBindingSource
         '
@@ -332,8 +332,7 @@ Partial Class frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1321, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(767, 450)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -343,9 +342,8 @@ Partial Class frmClientes
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FerreteriaLosHermanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrmClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -371,13 +369,11 @@ Partial Class frmClientes
     Friend WithEvents EliminarButton As Button
     Friend WithEvents ModificarButton As Button
     Friend WithEvents FrmClientesBindingSource As BindingSource
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents FerreteriaLosHermanosDataSet As FerreteriaLosHermanosDataSet
     Friend WithEvents ClientesBindingSource As BindingSource
     Friend WithEvents ClientesTableAdapter As FerreteriaLosHermanosDataSetTableAdapters.ClientesTableAdapter
-    Friend WithEvents ClienteIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CorreoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Cliente_cbx As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents SeleccionarButton As Button
 End Class

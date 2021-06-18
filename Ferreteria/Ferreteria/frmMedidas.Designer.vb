@@ -24,6 +24,7 @@ Partial Class frmMedidas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMedidas))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Medida_cbx = New System.Windows.Forms.ComboBox()
         Me.Nombre_Tbx = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,7 +40,6 @@ Partial Class frmMedidas
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -56,6 +56,16 @@ Partial Class frmMedidas
         Me.GroupBox1.Size = New System.Drawing.Size(591, 88)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 62)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(103, 16)
+        Me.Label7.TabIndex = 35
+        Me.Label7.Text = "Ver Datos de:"
         '
         'Medida_cbx
         '
@@ -214,16 +224,6 @@ Partial Class frmMedidas
         Me.ModificarButton.Size = New System.Drawing.Size(101, 107)
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 62)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(103, 16)
-        Me.Label7.TabIndex = 35
-        Me.Label7.Text = "Ver Datos de:"
         '
         'frmMedidas
         '

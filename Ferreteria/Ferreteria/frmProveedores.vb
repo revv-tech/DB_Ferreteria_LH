@@ -104,6 +104,8 @@ Public Class frmProveedores
         Else
             MessageBox.Show("Debe ingresar el ID de un Proveedor", "Eliminado Proveedor...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        Proveedor_cbx.Text = ""
+        llenarComboProveedores()
     End Sub
 
     Private Sub SeleccionarButton_Click(sender As Object, e As EventArgs) Handles SeleccionarButton.Click
@@ -122,21 +124,46 @@ Public Class frmProveedores
                 'se indica el nombre del stored procedure y el tipo'
                 sqlCon.Open()
                 sqlComm.CommandText = "sp_SeleccionarProveedoresID" '
-                sqlComm.Parameters.AddWithValue("@ID", Proveedor_cbx.SelectedIndex + 1)
+                sqlComm.Parameters.AddWithValue("@ID", Proveedor_cbx.SelectedValue)
                 'Tipo de comando'
                 sqlComm.CommandType = CommandType.StoredProcedure
                 Dim dataR As SqlDataReader
                 dataR = sqlComm.ExecuteReader()
 
                 If dataR.Read() Then
-
+                    ID_Tbx.Text = dataR.GetInt32(0)
                     Nombre_Tbx.Text = dataR.GetSqlString(1)
                     Dir_Tbx.Text = dataR.GetSqlString(2)
-                    Tel_Tbx.Text = dataR.GetSqlString(3)
-                    Correo_Tbx.Text = dataR.GetSqlString(4)
+                    Tel_Tbx.Text = dataR.GetSqlString(4)
+                    Correo_Tbx.Text = dataR.GetSqlString(3)
 
                 End If
             End If
         End Using
+    End Sub
+
+    Private Sub ModificarButton_Click(sender As Object, e As EventArgs) Handles ModificarButton.Click
+        If (Me.ValidateChildren = True And Nombre_Tbx.Text <> "") And (Me.ValidateChildren = True And Dir_Tbx.Text <> "") And (Me.ValidateChildren = True And Correo_Tbx.Text <> "") And (Me.ValidateChildren = True And Tel_Tbx.Text <> "") Then
+            Try
+                ep.id_ = ID_Tbx.Text
+                ep.Direccion_ = Dir_Tbx.Text
+                ep.Nombre_ = Nombre_Tbx.Text
+                ep.Telefono_ = Tel_Tbx.Text
+                ep.Correo_ = Correo_Tbx.Text
+
+                If func.Modificar_Proveedor_Cliente_Local("sp_ModificarProveedores", ep) Then
+                    MessageBox.Show("Proveedor modificado correctamente!", "Modificando Proveedor...")
+                    ID_Tbx.Text = ""
+                Else
+                    MessageBox.Show("Proveedor no encontrado!", "Modificando Proveedor...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ID_Tbx.Text = ""
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Debe ingresar el ID de un proveedor", "Modificando Proveedor...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+        llenarComboProveedores()
     End Sub
 End Class

@@ -24,6 +24,8 @@ Partial Class frmEmpleados
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEmpleados))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Empleado_cbx = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.LocalCbx = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Fecha_Tbx = New System.Windows.Forms.TextBox()
@@ -53,6 +55,8 @@ Partial Class frmEmpleados
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Empleado_cbx)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.LocalCbx)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Fecha_Tbx)
@@ -68,9 +72,29 @@ Partial Class frmEmpleados
         Me.GroupBox1.Controls.Add(Me.ID_Tbx)
         Me.GroupBox1.Location = New System.Drawing.Point(24, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(752, 270)
+        Me.GroupBox1.Size = New System.Drawing.Size(752, 309)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'Empleado_cbx
+        '
+        Me.Empleado_cbx.DisplayMember = "Nombre"
+        Me.Empleado_cbx.FormattingEnabled = True
+        Me.Empleado_cbx.Location = New System.Drawing.Point(130, 282)
+        Me.Empleado_cbx.Name = "Empleado_cbx"
+        Me.Empleado_cbx.Size = New System.Drawing.Size(606, 21)
+        Me.Empleado_cbx.TabIndex = 34
+        Me.Empleado_cbx.ValueMember = "LocalID"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(10, 283)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(103, 16)
+        Me.Label12.TabIndex = 33
+        Me.Label12.Text = "Ver Datos de:"
         '
         'LocalCbx
         '
@@ -198,7 +222,7 @@ Partial Class frmEmpleados
         Me.GroupBox2.Controls.Add(Me.EliminarButton)
         Me.GroupBox2.Controls.Add(Me.SeleccionarButton)
         Me.GroupBox2.Controls.Add(Me.ModificarButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(24, 288)
+        Me.GroupBox2.Location = New System.Drawing.Point(24, 327)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
         Me.GroupBox2.TabIndex = 25
@@ -304,7 +328,7 @@ Partial Class frmEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 502)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -341,4 +365,6 @@ Partial Class frmEmpleados
     Friend WithEvents SeleccionarButton As Button
     Friend WithEvents ModificarButton As Button
     Friend WithEvents LocalCbx As ComboBox
+    Friend WithEvents Empleado_cbx As ComboBox
+    Friend WithEvents Label12 As Label
 End Class

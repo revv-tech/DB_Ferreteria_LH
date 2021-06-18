@@ -37,9 +37,15 @@ Partial Class frmLocales
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.NuevoButton = New System.Windows.Forms.Button()
+        Me.SalirButton = New System.Windows.Forms.Button()
+        Me.EliminarButton = New System.Windows.Forms.Button()
+        Me.ModificarButton = New System.Windows.Forms.Button()
         Me.FerreteriaLosHermanosDataSet3 = New Ferreteria.FerreteriaLosHermanosDataSet3()
         Me.LocalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LocalesTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet3TableAdapters.LocalesTableAdapter()
@@ -51,17 +57,11 @@ Partial Class frmLocales
         Me.Sp_SeleccionarLocalesTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.sp_SeleccionarLocalesTableAdapter()
         Me.TableAdapterManager = New Ferreteria.FerreteriaLosHermanosDataSet5TableAdapters.TableAdapterManager()
         Me.LocalCbx = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.SeleccionarButton = New System.Windows.Forms.Button()
-        Me.NuevoButton = New System.Windows.Forms.Button()
-        Me.SalirButton = New System.Windows.Forms.Button()
-        Me.EliminarButton = New System.Windows.Forms.Button()
-        Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.LocalesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FerreteriaLosHermanosDataSet7 = New Ferreteria.FerreteriaLosHermanosDataSet7()
         Me.FerreteriaLosHermanosDataSet6 = New Ferreteria.FerreteriaLosHermanosDataSet6()
         Me.SpSeleccionarLocalesIDBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_SeleccionarLocalesIDTableAdapter = New Ferreteria.FerreteriaLosHermanosDataSet6TableAdapters.sp_SeleccionarLocalesIDTableAdapter()
-        Me.FerreteriaLosHermanosDataSet7 = New Ferreteria.FerreteriaLosHermanosDataSet7()
-        Me.LocalesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.LocalesTableAdapter2 = New Ferreteria.FerreteriaLosHermanosDataSet7TableAdapters.LocalesTableAdapter()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -70,10 +70,10 @@ Partial Class frmLocales
         CType(Me.LocalesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LocalesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FerreteriaLosHermanosDataSet7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpSeleccionarLocalesIDBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FerreteriaLosHermanosDataSet7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LocalesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -209,6 +209,27 @@ Partial Class frmLocales
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(232, 131)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 16)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "Seleccionar"
+        '
+        'SeleccionarButton
+        '
+        Me.SeleccionarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.SeleccionarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SeleccionarButton.Image = Global.Ferreteria.My.Resources.Resources.disco_flexible
+        Me.SeleccionarButton.Location = New System.Drawing.Point(223, 23)
+        Me.SeleccionarButton.Name = "SeleccionarButton"
+        Me.SeleccionarButton.Size = New System.Drawing.Size(110, 107)
+        Me.SeleccionarButton.TabIndex = 10
+        Me.SeleccionarButton.UseVisualStyleBackColor = True
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -238,6 +259,51 @@ Partial Class frmLocales
         Me.Label11.Size = New System.Drawing.Size(64, 16)
         Me.Label11.TabIndex = 6
         Me.Label11.Text = "Eliminar"
+        '
+        'NuevoButton
+        '
+        Me.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.NuevoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NuevoButton.Image = Global.Ferreteria.My.Resources.Resources.new3
+        Me.NuevoButton.Location = New System.Drawing.Point(9, 23)
+        Me.NuevoButton.Name = "NuevoButton"
+        Me.NuevoButton.Size = New System.Drawing.Size(101, 107)
+        Me.NuevoButton.TabIndex = 6
+        Me.NuevoButton.UseVisualStyleBackColor = True
+        '
+        'SalirButton
+        '
+        Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
+        Me.SalirButton.Location = New System.Drawing.Point(645, 26)
+        Me.SalirButton.Name = "SalirButton"
+        Me.SalirButton.Size = New System.Drawing.Size(100, 101)
+        Me.SalirButton.TabIndex = 4
+        Me.SalirButton.UseVisualStyleBackColor = True
+        '
+        'EliminarButton
+        '
+        Me.EliminarButton.BackColor = System.Drawing.SystemColors.Control
+        Me.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EliminarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
+        Me.EliminarButton.Location = New System.Drawing.Point(339, 23)
+        Me.EliminarButton.Name = "EliminarButton"
+        Me.EliminarButton.Size = New System.Drawing.Size(103, 107)
+        Me.EliminarButton.TabIndex = 3
+        Me.EliminarButton.UseVisualStyleBackColor = False
+        '
+        'ModificarButton
+        '
+        Me.ModificarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ModificarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ModificarButton.Image = Global.Ferreteria.My.Resources.Resources.editar
+        Me.ModificarButton.Location = New System.Drawing.Point(116, 23)
+        Me.ModificarButton.Name = "ModificarButton"
+        Me.ModificarButton.Size = New System.Drawing.Size(101, 107)
+        Me.ModificarButton.TabIndex = 1
+        Me.ModificarButton.UseVisualStyleBackColor = True
         '
         'FerreteriaLosHermanosDataSet3
         '
@@ -303,71 +369,15 @@ Partial Class frmLocales
         Me.LocalCbx.TabIndex = 30
         Me.LocalCbx.ValueMember = "LocalID"
         '
-        'Label8
+        'LocalesBindingSource2
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(232, 131)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(91, 16)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Seleccionar"
+        Me.LocalesBindingSource2.DataMember = "Locales"
+        Me.LocalesBindingSource2.DataSource = Me.FerreteriaLosHermanosDataSet7
         '
-        'SeleccionarButton
+        'FerreteriaLosHermanosDataSet7
         '
-        Me.SeleccionarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.SeleccionarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SeleccionarButton.Image = Global.Ferreteria.My.Resources.Resources.disco_flexible
-        Me.SeleccionarButton.Location = New System.Drawing.Point(223, 23)
-        Me.SeleccionarButton.Name = "SeleccionarButton"
-        Me.SeleccionarButton.Size = New System.Drawing.Size(110, 107)
-        Me.SeleccionarButton.TabIndex = 10
-        Me.SeleccionarButton.UseVisualStyleBackColor = True
-        '
-        'NuevoButton
-        '
-        Me.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.NuevoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NuevoButton.Image = Global.Ferreteria.My.Resources.Resources.new3
-        Me.NuevoButton.Location = New System.Drawing.Point(9, 23)
-        Me.NuevoButton.Name = "NuevoButton"
-        Me.NuevoButton.Size = New System.Drawing.Size(101, 107)
-        Me.NuevoButton.TabIndex = 6
-        Me.NuevoButton.UseVisualStyleBackColor = True
-        '
-        'SalirButton
-        '
-        Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(645, 26)
-        Me.SalirButton.Name = "SalirButton"
-        Me.SalirButton.Size = New System.Drawing.Size(100, 101)
-        Me.SalirButton.TabIndex = 4
-        Me.SalirButton.UseVisualStyleBackColor = True
-        '
-        'EliminarButton
-        '
-        Me.EliminarButton.BackColor = System.Drawing.SystemColors.Control
-        Me.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.EliminarButton.Image = Global.Ferreteria.My.Resources.Resources.borrar_cuenta
-        Me.EliminarButton.Location = New System.Drawing.Point(339, 23)
-        Me.EliminarButton.Name = "EliminarButton"
-        Me.EliminarButton.Size = New System.Drawing.Size(103, 107)
-        Me.EliminarButton.TabIndex = 3
-        Me.EliminarButton.UseVisualStyleBackColor = False
-        '
-        'ModificarButton
-        '
-        Me.ModificarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ModificarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ModificarButton.Image = Global.Ferreteria.My.Resources.Resources.editar
-        Me.ModificarButton.Location = New System.Drawing.Point(116, 23)
-        Me.ModificarButton.Name = "ModificarButton"
-        Me.ModificarButton.Size = New System.Drawing.Size(101, 107)
-        Me.ModificarButton.TabIndex = 1
-        Me.ModificarButton.UseVisualStyleBackColor = True
+        Me.FerreteriaLosHermanosDataSet7.DataSetName = "FerreteriaLosHermanosDataSet7"
+        Me.FerreteriaLosHermanosDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FerreteriaLosHermanosDataSet6
         '
@@ -382,16 +392,6 @@ Partial Class frmLocales
         'Sp_SeleccionarLocalesIDTableAdapter
         '
         Me.Sp_SeleccionarLocalesIDTableAdapter.ClearBeforeFill = True
-        '
-        'FerreteriaLosHermanosDataSet7
-        '
-        Me.FerreteriaLosHermanosDataSet7.DataSetName = "FerreteriaLosHermanosDataSet7"
-        Me.FerreteriaLosHermanosDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LocalesBindingSource2
-        '
-        Me.LocalesBindingSource2.DataMember = "Locales"
-        Me.LocalesBindingSource2.DataSource = Me.FerreteriaLosHermanosDataSet7
         '
         'LocalesTableAdapter2
         '
@@ -418,10 +418,10 @@ Partial Class frmLocales
         CType(Me.LocalesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LocalesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FerreteriaLosHermanosDataSet7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpSeleccionarLocalesIDBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FerreteriaLosHermanosDataSet7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LocalesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

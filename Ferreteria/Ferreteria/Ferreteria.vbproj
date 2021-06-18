@@ -144,12 +144,6 @@
     <Compile Include="frmFacturas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIngresos.Designer.vb">
-      <DependentUpon>frmIngresos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmIngresos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmInventarios.Designer.vb">
       <DependentUpon>frmInventarios.vb</DependentUpon>
     </Compile>
@@ -226,9 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFacturas.resx">
       <DependentUpon>frmFacturas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmIngresos.resx">
-      <DependentUpon>frmIngresos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventarios.resx">
       <DependentUpon>frmInventarios.vb</DependentUpon>

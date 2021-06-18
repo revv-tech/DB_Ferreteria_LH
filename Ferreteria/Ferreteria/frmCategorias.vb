@@ -138,14 +138,14 @@ Public Class frmCategorias
                 'se indica el nombre del stored procedure y el tipo'
                 sqlCon.Open()
                 sqlComm.CommandText = "sp_SeleccionarCategoriasID" '
-                sqlComm.Parameters.AddWithValue("@ID", Categoria_cbx.SelectedIndex + 1)
+                sqlComm.Parameters.AddWithValue("@ID", Categoria_cbx.SelectedValue)
                 'Tipo de comando'
                 sqlComm.CommandType = CommandType.StoredProcedure
                 Dim dataR As SqlDataReader
                 dataR = sqlComm.ExecuteReader()
 
                 If dataR.Read() Then
-
+                    ID_txb.Text = dataR.GetSqlInt32(0)
                     Nombre_Tbx.Text = dataR.GetSqlString(1)
                     Descrip_tbx.Text = dataR.GetSqlString(2)
 

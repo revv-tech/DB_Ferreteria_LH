@@ -33,7 +33,6 @@ Partial Class frmPedidos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TotalL_tbx = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Producto_tbx = New System.Windows.Forms.TextBox()
         Me.ID_tbx = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,12 +44,14 @@ Partial Class frmPedidos
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.Producto_cbx = New System.Windows.Forms.ComboBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Producto_cbx)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.Precio_tbx)
         Me.GroupBox3.Controls.Add(Me.Label1)
@@ -60,7 +61,6 @@ Partial Class frmPedidos
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.TotalL_tbx)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.Producto_tbx)
         Me.GroupBox3.Controls.Add(Me.ID_tbx)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox3.Name = "GroupBox3"
@@ -89,7 +89,7 @@ Partial Class frmPedidos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 68)
+        Me.Label1.Location = New System.Drawing.Point(15, 72)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 16)
         Me.Label1.TabIndex = 18
@@ -99,11 +99,11 @@ Partial Class frmPedidos
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 42)
+        Me.Label5.Location = New System.Drawing.Point(15, 45)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 16)
+        Me.Label5.Size = New System.Drawing.Size(60, 16)
         Me.Label5.TabIndex = 17
-        Me.Label5.Text = "ID Factura"
+        Me.Label5.Text = "Factura"
         '
         'Label6
         '
@@ -117,7 +117,7 @@ Partial Class frmPedidos
         '
         'Factura_tbx
         '
-        Me.Factura_tbx.Location = New System.Drawing.Point(121, 42)
+        Me.Factura_tbx.Location = New System.Drawing.Point(121, 44)
         Me.Factura_tbx.Multiline = True
         Me.Factura_tbx.Name = "Factura_tbx"
         Me.Factura_tbx.Size = New System.Drawing.Size(310, 17)
@@ -127,15 +127,15 @@ Partial Class frmPedidos
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(6, 19)
+        Me.Label8.Location = New System.Drawing.Point(15, 20)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 16)
+        Me.Label8.Size = New System.Drawing.Size(70, 16)
         Me.Label8.TabIndex = 15
-        Me.Label8.Text = "ID Producto"
+        Me.Label8.Text = "Producto"
         '
         'TotalL_tbx
         '
-        Me.TotalL_tbx.Location = New System.Drawing.Point(121, 65)
+        Me.TotalL_tbx.Location = New System.Drawing.Point(121, 68)
         Me.TotalL_tbx.Name = "TotalL_tbx"
         Me.TotalL_tbx.Size = New System.Drawing.Size(310, 20)
         Me.TotalL_tbx.TabIndex = 3
@@ -149,14 +149,6 @@ Partial Class frmPedidos
         Me.Label9.Size = New System.Drawing.Size(23, 16)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "ID" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'Producto_tbx
-        '
-        Me.Producto_tbx.Location = New System.Drawing.Point(121, 19)
-        Me.Producto_tbx.Multiline = True
-        Me.Producto_tbx.Name = "Producto_tbx"
-        Me.Producto_tbx.Size = New System.Drawing.Size(310, 17)
-        Me.Producto_tbx.TabIndex = 14
         '
         'ID_tbx
         '
@@ -238,9 +230,9 @@ Partial Class frmPedidos
         Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(496, 26)
+        Me.SalirButton.Location = New System.Drawing.Point(488, 24)
         Me.SalirButton.Name = "SalirButton"
-        Me.SalirButton.Size = New System.Drawing.Size(100, 101)
+        Me.SalirButton.Size = New System.Drawing.Size(112, 104)
         Me.SalirButton.TabIndex = 4
         Me.SalirButton.UseVisualStyleBackColor = True
         '
@@ -278,6 +270,14 @@ Partial Class frmPedidos
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'Producto_cbx
+        '
+        Me.Producto_cbx.FormattingEnabled = True
+        Me.Producto_cbx.Location = New System.Drawing.Point(121, 19)
+        Me.Producto_cbx.Name = "Producto_cbx"
+        Me.Producto_cbx.Size = New System.Drawing.Size(310, 21)
+        Me.Producto_cbx.TabIndex = 21
+        '
         'frmPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -304,7 +304,6 @@ Partial Class frmPedidos
     Friend WithEvents TotalL_tbx As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Producto_tbx As TextBox
     Friend WithEvents ID_tbx As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Precio_tbx As TextBox
@@ -318,4 +317,5 @@ Partial Class frmPedidos
     Friend WithEvents EliminarButton As Button
     Friend WithEvents SeleccionarButton As Button
     Friend WithEvents ModificarButton As Button
+    Friend WithEvents Producto_cbx As ComboBox
 End Class

@@ -24,14 +24,11 @@ Partial Class frmInventarios
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventarios))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.LocalCbx = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Stock = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Producto_tbx = New System.Windows.Forms.TextBox()
         Me.ID_tbx = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,6 +42,9 @@ Partial Class frmInventarios
         Me.ModificarButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Inventario_cbx = New System.Windows.Forms.ComboBox()
+        Me.Producto_cbx = New System.Windows.Forms.ComboBox()
+        Me.LocalCbx = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -52,53 +52,35 @@ Partial Class frmInventarios
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.LocalCbx)
+        Me.GroupBox3.Controls.Add(Me.Producto_cbx)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Stock)
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.Producto_tbx)
         Me.GroupBox3.Controls.Add(Me.ID_tbx)
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 20)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(599, 95)
+        Me.GroupBox3.Size = New System.Drawing.Size(599, 103)
         Me.GroupBox3.TabIndex = 8
         Me.GroupBox3.TabStop = False
-        '
-        'LocalCbx
-        '
-        Me.LocalCbx.FormattingEnabled = True
-        Me.LocalCbx.Location = New System.Drawing.Point(121, 67)
-        Me.LocalCbx.Name = "LocalCbx"
-        Me.LocalCbx.Size = New System.Drawing.Size(310, 21)
-        Me.LocalCbx.TabIndex = 19
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 20)
+        Me.Label1.Location = New System.Drawing.Point(7, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 16)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Stock"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 68)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 16)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "Local"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(172, -3)
+        Me.Label6.Location = New System.Drawing.Point(236, -3)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 16)
         Me.Label6.TabIndex = 6
@@ -106,7 +88,7 @@ Partial Class frmInventarios
         '
         'Stock
         '
-        Me.Stock.Location = New System.Drawing.Point(121, 19)
+        Me.Stock.Location = New System.Drawing.Point(121, 72)
         Me.Stock.Name = "Stock"
         Me.Stock.Size = New System.Drawing.Size(310, 20)
         Me.Stock.TabIndex = 3
@@ -115,11 +97,11 @@ Partial Class frmInventarios
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(6, 45)
+        Me.Label8.Location = New System.Drawing.Point(6, 16)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 16)
+        Me.Label8.Size = New System.Drawing.Size(70, 16)
         Me.Label8.TabIndex = 15
-        Me.Label8.Text = "ID Producto"
+        Me.Label8.Text = "Producto"
         '
         'Label9
         '
@@ -130,14 +112,6 @@ Partial Class frmInventarios
         Me.Label9.Size = New System.Drawing.Size(23, 16)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "ID" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'Producto_tbx
-        '
-        Me.Producto_tbx.Location = New System.Drawing.Point(121, 45)
-        Me.Producto_tbx.Multiline = True
-        Me.Producto_tbx.Name = "Producto_tbx"
-        Me.Producto_tbx.Size = New System.Drawing.Size(310, 17)
-        Me.Producto_tbx.TabIndex = 14
         '
         'ID_tbx
         '
@@ -219,9 +193,9 @@ Partial Class frmInventarios
         Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(490, 26)
+        Me.SalirButton.Location = New System.Drawing.Point(477, 23)
         Me.SalirButton.Name = "SalirButton"
-        Me.SalirButton.Size = New System.Drawing.Size(100, 101)
+        Me.SalirButton.Size = New System.Drawing.Size(115, 108)
         Me.SalirButton.TabIndex = 4
         Me.SalirButton.UseVisualStyleBackColor = True
         '
@@ -279,6 +253,36 @@ Partial Class frmInventarios
         Me.Inventario_cbx.TabIndex = 38
         Me.Inventario_cbx.ValueMember = "LocalID"
         '
+        'Producto_cbx
+        '
+        Me.Producto_cbx.DisplayMember = "Nombre"
+        Me.Producto_cbx.FormattingEnabled = True
+        Me.Producto_cbx.Location = New System.Drawing.Point(121, 18)
+        Me.Producto_cbx.Name = "Producto_cbx"
+        Me.Producto_cbx.Size = New System.Drawing.Size(310, 21)
+        Me.Producto_cbx.TabIndex = 37
+        Me.Producto_cbx.ValueMember = "LocalID"
+        '
+        'LocalCbx
+        '
+        Me.LocalCbx.DisplayMember = "Nombre"
+        Me.LocalCbx.FormattingEnabled = True
+        Me.LocalCbx.Location = New System.Drawing.Point(121, 45)
+        Me.LocalCbx.Name = "LocalCbx"
+        Me.LocalCbx.Size = New System.Drawing.Size(310, 21)
+        Me.LocalCbx.TabIndex = 38
+        Me.LocalCbx.ValueMember = "LocalID"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(7, 45)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 16)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "Local"
+        '
         'frmInventarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -300,12 +304,10 @@ Partial Class frmInventarios
 
     End Sub
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Stock As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Producto_tbx As TextBox
     Friend WithEvents ID_tbx As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
@@ -318,7 +320,9 @@ Partial Class frmInventarios
     Friend WithEvents EliminarButton As Button
     Friend WithEvents SeleccionarButton As Button
     Friend WithEvents ModificarButton As Button
-    Friend WithEvents LocalCbx As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Inventario_cbx As ComboBox
+    Friend WithEvents Producto_cbx As ComboBox
+    Friend WithEvents LocalCbx As ComboBox
+    Friend WithEvents Label5 As Label
 End Class

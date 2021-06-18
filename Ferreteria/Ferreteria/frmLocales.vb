@@ -120,7 +120,7 @@ Public Class frmLocales
                 'se indica el nombre del stored procedure y el tipo'
                 sqlCon.Open()
                 sqlComm.CommandText = "sp_SeleccionarLocalesID" '
-                sqlComm.Parameters.AddWithValue("@ID", LocalCbx.SelectedIndex + 1)
+                sqlComm.Parameters.AddWithValue("@ID", LocalCbx.SelectedValue)
                 'Tipo de comando'
                 sqlComm.CommandType = CommandType.StoredProcedure
                 Dim dataR As SqlDataReader
@@ -128,10 +128,12 @@ Public Class frmLocales
 
                 If dataR.Read() Then
 
+                    ID_Tbx.Text = dataR.GetSqlInt32(0)
                     Nombre_Tbx.Text = dataR.GetSqlString(1)
                     Dir_Tbx.Text = dataR.GetSqlString(2)
                     Tel_Tbx.Text = dataR.GetSqlString(3)
                     Correo_Tbx.Text = dataR.GetSqlString(4)
+
                 End If
             End If
         End Using
@@ -140,5 +142,29 @@ Public Class frmLocales
 
     Private Sub SalirButton_Click_1(sender As Object, e As EventArgs) Handles SalirButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub ModificarButton_Click(sender As Object, e As EventArgs) Handles ModificarButton.Click
+        If (Me.ValidateChildren = True And Nombre_Tbx.Text <> "") And (Me.ValidateChildren = True And Dir_Tbx.Text <> "") And (Me.ValidateChildren = True And Correo_Tbx.Text <> "") And (Me.ValidateChildren = True And Tel_Tbx.Text <> "") Then
+            Try
+                ep.id_ = ID_Tbx.Text
+                ep.Direccion_ = Dir_Tbx.Text
+                ep.Nombre_ = Nombre_Tbx.Text
+                ep.Telefono_ = Tel_Tbx.Text
+                ep.Correo_ = Correo_Tbx.Text
+
+                If func.Modificar_Proveedor_Cliente_Local("sp_ModificarLocales", ep) Then
+                    MessageBox.Show("Local modificado correctamente!", "Modificando Local...")
+                    ID_Tbx.Text = ""
+                Else
+                    MessageBox.Show("Local no encontrado!", "Modificando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ID_Tbx.Text = ""
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Debe ingresar el ID de un local", "Modificando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class

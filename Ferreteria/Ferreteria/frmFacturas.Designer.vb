@@ -35,11 +35,9 @@ Partial Class frmFacturas
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Subtotal_tbx = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Cliente_ID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Empleado_tbx = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Total_tbx = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,12 +53,16 @@ Partial Class frmFacturas
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.Empleado_cbx = New System.Windows.Forms.ComboBox()
+        Me.Cliente_cbx = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Cliente_cbx)
+        Me.GroupBox1.Controls.Add(Me.Empleado_cbx)
         Me.GroupBox1.Controls.Add(Me.TipoVenta_cbx)
         Me.GroupBox1.Controls.Add(Me.Local_cbx)
         Me.GroupBox1.Controls.Add(Me.Label12)
@@ -72,11 +74,9 @@ Partial Class frmFacturas
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Subtotal_tbx)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Cliente_ID)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Empleado_tbx)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Total_tbx)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -91,7 +91,7 @@ Partial Class frmFacturas
         'TipoVenta_cbx
         '
         Me.TipoVenta_cbx.FormattingEnabled = True
-        Me.TipoVenta_cbx.Location = New System.Drawing.Point(116, 182)
+        Me.TipoVenta_cbx.Location = New System.Drawing.Point(121, 182)
         Me.TipoVenta_cbx.Name = "TipoVenta_cbx"
         Me.TipoVenta_cbx.Size = New System.Drawing.Size(310, 21)
         Me.TipoVenta_cbx.TabIndex = 30
@@ -179,17 +179,9 @@ Partial Class frmFacturas
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 142)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(75, 16)
+        Me.Label5.Size = New System.Drawing.Size(56, 16)
         Me.Label5.TabIndex = 19
-        Me.Label5.Text = "ID Cliente"
-        '
-        'Cliente_ID
-        '
-        Me.Cliente_ID.Location = New System.Drawing.Point(116, 142)
-        Me.Cliente_ID.Multiline = True
-        Me.Cliente_ID.Name = "Cliente_ID"
-        Me.Cliente_ID.Size = New System.Drawing.Size(310, 17)
-        Me.Cliente_ID.TabIndex = 18
+        Me.Label5.Text = "Cliente"
         '
         'Label3
         '
@@ -207,9 +199,9 @@ Partial Class frmFacturas
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(3, 108)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 16)
+        Me.Label8.Size = New System.Drawing.Size(79, 16)
         Me.Label8.TabIndex = 15
-        Me.Label8.Text = "ID Empleado"
+        Me.Label8.Text = "Empleado"
         '
         'Label7
         '
@@ -220,14 +212,6 @@ Partial Class frmFacturas
         Me.Label7.Size = New System.Drawing.Size(46, 16)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Local"
-        '
-        'Empleado_tbx
-        '
-        Me.Empleado_tbx.Location = New System.Drawing.Point(121, 108)
-        Me.Empleado_tbx.Multiline = True
-        Me.Empleado_tbx.Name = "Empleado_tbx"
-        Me.Empleado_tbx.Size = New System.Drawing.Size(310, 17)
-        Me.Empleado_tbx.TabIndex = 14
         '
         'Label6
         '
@@ -387,6 +371,26 @@ Partial Class frmFacturas
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'Empleado_cbx
+        '
+        Me.Empleado_cbx.DisplayMember = "Nombre"
+        Me.Empleado_cbx.FormattingEnabled = True
+        Me.Empleado_cbx.Location = New System.Drawing.Point(121, 107)
+        Me.Empleado_cbx.Name = "Empleado_cbx"
+        Me.Empleado_cbx.Size = New System.Drawing.Size(310, 21)
+        Me.Empleado_cbx.TabIndex = 35
+        Me.Empleado_cbx.ValueMember = "LocalID"
+        '
+        'Cliente_cbx
+        '
+        Me.Cliente_cbx.DisplayMember = "Nombre"
+        Me.Cliente_cbx.FormattingEnabled = True
+        Me.Cliente_cbx.Location = New System.Drawing.Point(121, 142)
+        Me.Cliente_cbx.Name = "Cliente_cbx"
+        Me.Cliente_cbx.Size = New System.Drawing.Size(310, 21)
+        Me.Cliente_cbx.TabIndex = 36
+        Me.Cliente_cbx.ValueMember = "LocalID"
+        '
         'frmFacturas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -407,14 +411,12 @@ Partial Class frmFacturas
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Empleado_tbx As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Total_tbx As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents ID_Tbx As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Cliente_ID As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Impuesto_tbx As TextBox
@@ -436,4 +438,6 @@ Partial Class frmFacturas
     Friend WithEvents ModificarButton As Button
     Friend WithEvents TipoVenta_cbx As ComboBox
     Friend WithEvents Local_cbx As ComboBox
+    Friend WithEvents Cliente_cbx As ComboBox
+    Friend WithEvents Empleado_cbx As ComboBox
 End Class

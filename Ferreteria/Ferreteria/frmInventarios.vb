@@ -8,25 +8,63 @@ Public Class frmInventarios
     Dim func As New Funciones
     Private Sub frmInventarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarComboLocales()
+        llenarComboProductos()
         CenterToScreen()
     End Sub
 
+    Sub llenarComboProductos()
+
+        'Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Resultado de lo que se trae de la tabla'
+        Dim dt As DataTable
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+
+        Using (sqlCon)
+
+            Dim sqlComm As New SqlCommand()
+            'se hace la referencia a la conexión con la bd'
+            sqlComm.Connection = sqlCon
+            'se indica el nombre del stored procedure y el tipo'
+            sqlComm.CommandText = "sp_SeleccionarProductos" '
+            'Tipo de comando'
+            sqlComm.CommandType = CommandType.StoredProcedure
+            sqlad = New SqlDataAdapter(sqlComm)
+            dt = New DataTable("Datos")
+            'Llena el data table con la informacion que captura el sql adapter con el sp'
+            sqlad.Fill(dt)
+            Me.Producto_cbx.DataSource = dt
+            'DisplayMember: Lo que se va a mostrar al usuario'
+            Me.Producto_cbx.DisplayMember = "Nombre"
+            'ValueMember: Codigo que va enrrolado'
+            Me.Producto_cbx.ValueMember = "ProductoID"
+            Me.Producto_cbx.SelectedIndex = -1
+
+        End Using
+
+    End Sub
     Private Sub NuevoButton_Click(sender As Object, e As EventArgs) Handles NuevoButton.Click
-        If (Me.ValidateChildren = True And Stock.Text <> "") And (Me.ValidateChildren = True And Producto_tbx.Text <> "") And (Me.ValidateChildren = True And LocalCbx.Text <> "") Then
+        If (Me.ValidateChildren = True And Stock.Text <> "") And (Me.ValidateChildren = True And Producto_cbx.Text <> "") And (Me.ValidateChildren = True And LocalCbx.Text <> "") Then
             Try
+
                 ep.Cantidad_Ingreso = Stock.Text
-                ep.ProductoID = Producto_tbx.Text
+                ep.ProductoID = Producto_cbx.SelectedValue
                 ep.LocalId = LocalCbx.SelectedValue
 
-                If func.Insetar_Medida("sp_InsertarInventarios", ep) Then
-                    MessageBox.Show("Inventario insertado correctamente!", "Insertando Inventario...")
+                If func.Insetar_Inventario("sp_InsertarInventarios", ep) Then
 
-                    ep.Nombre_ = ""
+                    MessageBox.Show("Inventario insertado correctamente!", "Insertando Inventario...")
+                    Producto_cbx.Text = ""
+                    Stock.Text = ""
+                    LocalCbx.Text = ""
 
                 Else
                     MessageBox.Show("Inventario no insertado!", "Insertando Inventario...", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ep.Nombre_ = ""
+                    Producto_cbx.Text = ""
+                    Stock.Text = ""
+                    LocalCbx.Text = ""
 
                 End If
             Catch ex As Exception
@@ -92,6 +130,13 @@ Public Class frmInventarios
         Else
             MessageBox.Show("Debe ingresar el ID de un inventario", "Eliminado Inventario...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub ModificarButton_Click(sender As Object, e As EventArgs) Handles ModificarButton.Click
+
+    End Sub
+
+    Private Sub SeleccionarButton_Click(sender As Object, e As EventArgs) Handles SeleccionarButton.Click
     End Sub
 End Class
 
