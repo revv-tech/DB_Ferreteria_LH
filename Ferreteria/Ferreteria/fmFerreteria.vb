@@ -45,10 +45,6 @@
         frmTiposDeVenta.Show()
     End Sub
 
-    Private Sub PedidosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PedidosToolStripMenuItem.Click
-        frmPedidos.Show()
-    End Sub
-
     Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles SalirButton.Click
         Me.Close()
     End Sub

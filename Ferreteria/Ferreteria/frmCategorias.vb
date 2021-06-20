@@ -56,6 +56,8 @@ Public Class frmCategorias
         Else
             MessageBox.Show("Debe ingresar los datos de la categoria a insertar", "Insertando Categoría...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
+        llenarComboCategorias()
     End Sub
 
     Private Sub ModificarButton_Click(sender As Object, e As EventArgs) Handles ModificarButton.Click
@@ -65,7 +67,7 @@ Public Class frmCategorias
                 ep.Descripcion_ = Descrip_tbx.Text
                 ep.Nombre_ = Nombre_Tbx.Text
 
-                If func.Insetar_Categoria("sp_ModificarCategorias", ep) Then
+                If func.Modificar_Categoria("sp_ModificarCategorias", ep) Then
                     MessageBox.Show("Categoría modificada correctamente!", "Modificando Categoría...")
                     ID_txb.Text = ""
                     Descrip_tbx.Text = ""

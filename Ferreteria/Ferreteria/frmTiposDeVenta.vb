@@ -67,6 +67,7 @@ Public Class frmTiposDeVenta
         Else
             MessageBox.Show("Debe ingresar los datos del tipo de venta a insertar", "Insertando Tipo de Venta...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboTiposDeVenta()
     End Sub
 
     Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles SalirButton.Click

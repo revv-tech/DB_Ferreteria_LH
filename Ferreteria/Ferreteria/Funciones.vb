@@ -82,6 +82,31 @@ Public Class Funciones
             cn.Close()
         End Try
     End Function
+
+    Public Function Modificar_Categoria(nombreSp As String, ByVal data As Propiedades) As Boolean
+
+        Try
+            cn.Open()
+            cmd = New SqlCommand(nombreSp, cn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@ID", data.id_)
+            cmd.Parameters.AddWithValue("@nombre", data.Nombre_)
+            cmd.Parameters.AddWithValue("@descripcion", data.Descripcion_)
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cn.Close()
+        End Try
+    End Function
     Public Function Insetar_Proveedor_Cliente_Local(nombreSp As String, ByVal data As Propiedades) As Boolean
 
         Try
