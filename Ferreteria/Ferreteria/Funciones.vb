@@ -29,6 +29,28 @@ Public Class Funciones
         End Try
     End Function
 
+    'Buscar Stock por Local'
+    Public Function Buscar_Stock(nombreSp As String, ByVal data As Propiedades) As Boolean
+        Try
+            cn.Open()
+            cmd = New SqlCommand(nombreSp, cn)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@LocalID", data.LocalId)
+            cmd.Parameters.AddWithValue("@ProductoID", data.id_)
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cn.Close()
+        End Try
+    End Function
     'Atualizar Sp'
     Public Function Modificar_Proveedor_Cliente_Local(nombreSp As String, ByVal data As Propiedades) As Boolean
 
@@ -187,6 +209,7 @@ Public Class Funciones
         End Try
     End Function
 
+
     Public Function Modificar_Empleado(nombreSp As String, ByVal data As Propiedades) As Boolean
 
         Try
@@ -270,32 +293,6 @@ Public Class Funciones
         End Try
     End Function
 
-    Public Function Insetar_Ingreso(nombreSp As String, ByVal data As Propiedades) As Boolean
-
-        Try
-            cn.Open()
-            cmd = New SqlCommand(nombreSp, cn)
-            cmd.CommandType = CommandType.StoredProcedure
-
-            cmd.Parameters.AddWithValue("@cantidad", data.Cantidad_Ingreso)
-            cmd.Parameters.AddWithValue("@fecha", data.Fecha_)
-            cmd.Parameters.AddWithValue("@EmpleadoID", data.EmpleadoID)
-            cmd.Parameters.AddWithValue("@LocalID", data.LocalId)
-            cmd.Parameters.AddWithValue("@ProductoID", data.ProductoID)
-
-            If cmd.ExecuteNonQuery() Then
-                Return True
-            Else
-                Return False
-
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return False
-        Finally
-            cn.Close()
-        End Try
-    End Function
 
     Public Function Insetar_Medida(nombreSp As String, ByVal data As Propiedades) As Boolean
 
@@ -503,4 +500,57 @@ Public Class Funciones
     End Function
 
 
+
+
+    Public Function InsertarInventarioXLocal(nombreSp As String, n As Integer) As Boolean
+
+        Try
+            cn.Open()
+            cmd = New SqlCommand(nombreSp, cn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@ProductoID", n)
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cn.Close()
+        End Try
+
+    End Function
+
+    Public Function sp_SeleccionarInventarioXProducto(nombreSp As String, n As Integer) As Boolean
+
+        Try
+            cn.Open()
+            cmd = New SqlCommand(nombreSp, cn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@LocalID", n)
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cn.Close()
+        End Try
+
+    End Function
+
+
 End Class
+
+

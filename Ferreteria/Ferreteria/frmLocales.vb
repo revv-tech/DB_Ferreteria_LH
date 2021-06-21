@@ -15,6 +15,13 @@ Public Class frmLocales
 
 
     Private Sub NuevoButton_Click(sender As Object, e As EventArgs) Handles NuevoButton.Click
+
+        ''Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+        Dim n As Integer
+
         If (Me.ValidateChildren = True And Nombre_Tbx.Text <> "") And (Me.ValidateChildren = True And Dir_Tbx.Text <> "") And (Me.ValidateChildren = True And Correo_Tbx.Text <> "") And (Me.ValidateChildren = True And Tel_Tbx.Text <> "") Then
             Try
 
@@ -24,12 +31,33 @@ Public Class frmLocales
                 ep.Correo_ = Correo_Tbx.Text
 
                 If func.Insetar_Proveedor_Cliente_Local("sp_InsertarLocales", ep) Then
+
                     MessageBox.Show("Local insertado correctamente!", "Insertando Local...")
                     ID_Tbx.Text = ""
                     Dir_Tbx.Text = ""
                     Nombre_Tbx.Text = ""
                     Correo_Tbx.Text = ""
                     Tel_Tbx.Text = ""
+
+                    Using (sqlCon)
+
+                        Dim sqlComm As New SqlCommand()
+                        'se hace la referencia a la conexión con la bd'
+                        sqlComm.Connection = sqlCon
+                        'se indica el nombre del stored procedure y el tipo'
+                        sqlCon.Open()
+                        sqlComm.CommandText = "sp_MaxLocalesID" '
+                        'Tipo de comando'
+                        sqlComm.CommandType = CommandType.StoredProcedure
+                        Dim dataR As SqlDataReader
+                        dataR = sqlComm.ExecuteReader()
+                        If dataR.Read() Then
+                            n = dataR.GetInt32(0)
+                            func.sp_SeleccionarInventarioXProducto("sp_InsertarInventarioXProducto", n)
+                        End If
+
+
+                    End Using
 
                 Else
                     MessageBox.Show("Local no insertado!", "Insertando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -96,7 +124,6 @@ Public Class frmLocales
             'ValueMember: Codigo que va enrrolado'
             Me.LocalCbx.ValueMember = "LocalID"
             Me.LocalCbx.SelectedIndex = -1
-
 
         End Using
 
@@ -167,4 +194,5 @@ Public Class frmLocales
             MessageBox.Show("Debe ingresar el ID de un local", "Modificando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
+
 End Class

@@ -49,5 +49,7 @@
         Me.Close()
     End Sub
 
-
+    Private Sub FacturaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturaciónToolStripMenuItem.Click
+        frmCarrito.Show()
+    End Sub
 End Class

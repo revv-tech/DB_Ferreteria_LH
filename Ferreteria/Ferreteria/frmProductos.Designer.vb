@@ -24,6 +24,9 @@ Partial Class frmProductos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LocalCbx = New System.Windows.Forms.ComboBox()
         Me.Productos_cbx = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Proveedor_cbx = New System.Windows.Forms.ComboBox()
@@ -49,12 +52,17 @@ Partial Class frmProductos
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
+        Me.VerStock = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.VerStock)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.LocalCbx)
         Me.GroupBox1.Controls.Add(Me.Productos_cbx)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Proveedor_cbx)
@@ -72,9 +80,34 @@ Partial Class frmProductos
         Me.GroupBox1.Controls.Add(Me.ID_Txb)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(762, 192)
+        Me.GroupBox1.Size = New System.Drawing.Size(856, 192)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(710, 123)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.TabIndex = 38
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(470, 95)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(46, 16)
+        Me.Label13.TabIndex = 37
+        Me.Label13.Text = "Local"
+        '
+        'LocalCbx
+        '
+        Me.LocalCbx.FormattingEnabled = True
+        Me.LocalCbx.Location = New System.Drawing.Point(530, 94)
+        Me.LocalCbx.Name = "LocalCbx"
+        Me.LocalCbx.Size = New System.Drawing.Size(310, 21)
+        Me.LocalCbx.TabIndex = 36
         '
         'Productos_cbx
         '
@@ -144,7 +177,7 @@ Partial Class frmProductos
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(470, 72)
+        Me.Label6.Location = New System.Drawing.Point(471, 64)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 16)
         Me.Label6.TabIndex = 11
@@ -152,9 +185,9 @@ Partial Class frmProductos
         '
         'Precio_Tbx
         '
-        Me.Precio_Tbx.Location = New System.Drawing.Point(530, 68)
+        Me.Precio_Tbx.Location = New System.Drawing.Point(530, 63)
         Me.Precio_Tbx.Name = "Precio_Tbx"
-        Me.Precio_Tbx.Size = New System.Drawing.Size(224, 20)
+        Me.Precio_Tbx.Size = New System.Drawing.Size(310, 20)
         Me.Precio_Tbx.TabIndex = 10
         '
         'Label4
@@ -171,7 +204,7 @@ Partial Class frmProductos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(192, 33)
+        Me.Label3.Location = New System.Drawing.Point(196, 23)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(155, 16)
         Me.Label3.TabIndex = 4
@@ -179,9 +212,9 @@ Partial Class frmProductos
         '
         'Nombre_Tbx
         '
-        Me.Nombre_Tbx.Location = New System.Drawing.Point(368, 32)
+        Me.Nombre_Tbx.Location = New System.Drawing.Point(368, 19)
         Me.Nombre_Tbx.Name = "Nombre_Tbx"
-        Me.Nombre_Tbx.Size = New System.Drawing.Size(388, 20)
+        Me.Nombre_Tbx.Size = New System.Drawing.Size(472, 20)
         Me.Nombre_Tbx.TabIndex = 3
         '
         'Label2
@@ -225,7 +258,7 @@ Partial Class frmProductos
         Me.GroupBox2.Controls.Add(Me.ModificarButton)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 210)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(752, 150)
+        Me.GroupBox2.Size = New System.Drawing.Size(856, 150)
         Me.GroupBox2.TabIndex = 27
         Me.GroupBox2.TabStop = False
         '
@@ -285,7 +318,7 @@ Partial Class frmProductos
         Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(645, 26)
+        Me.SalirButton.Location = New System.Drawing.Point(750, 29)
         Me.SalirButton.Name = "SalirButton"
         Me.SalirButton.Size = New System.Drawing.Size(100, 101)
         Me.SalirButton.TabIndex = 4
@@ -325,11 +358,25 @@ Partial Class frmProductos
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
+        'VerStock
+        '
+        Me.VerStock.BackColor = System.Drawing.Color.Green
+        Me.VerStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.VerStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VerStock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerStock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.VerStock.Location = New System.Drawing.Point(589, 123)
+        Me.VerStock.Name = "VerStock"
+        Me.VerStock.Size = New System.Drawing.Size(115, 23)
+        Me.VerStock.TabIndex = 39
+        Me.VerStock.Text = "Ver Stock: "
+        Me.VerStock.UseVisualStyleBackColor = False
+        '
         'frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(778, 372)
+        Me.ClientSize = New System.Drawing.Size(880, 372)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -368,4 +415,8 @@ Partial Class frmProductos
     Friend WithEvents CategoriaCbx As ComboBox
     Friend WithEvents Productos_cbx As ComboBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents LocalCbx As ComboBox
+    Friend WithEvents VerStock As Button
 End Class

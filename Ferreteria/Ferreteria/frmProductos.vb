@@ -13,6 +13,7 @@ Public Class frmProductos
         llenarComboMedidas()
         llenarComboProveedores()
         llenarComboProductos()
+        llenarComboLocales()
         CenterToScreen()
     End Sub
 
@@ -86,6 +87,38 @@ Public Class frmProductos
 
     End Sub
 
+    Sub llenarComboLocales()
+
+        'Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Resultado de lo que se trae de la tabla'
+        Dim dt As DataTable
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+
+        Using (sqlCon)
+
+            Dim sqlComm As New SqlCommand()
+            'se hace la referencia a la conexión con la bd'
+            sqlComm.Connection = sqlCon
+            'se indica el nombre del stored procedure y el tipo'
+            sqlComm.CommandText = "sp_SeleccionarLocales" '
+            'Tipo de comando'
+            sqlComm.CommandType = CommandType.StoredProcedure
+            sqlad = New SqlDataAdapter(sqlComm)
+            dt = New DataTable("Datos")
+            'Llena el data table con la informacion que captura el sql adapter con el sp'
+            sqlad.Fill(dt)
+            Me.LocalCbx.DataSource = dt
+            'DisplayMember: Lo que se va a mostrar al usuario'
+            Me.LocalCbx.DisplayMember = "Nombre"
+            'ValueMember: Codigo que va enrrolado'
+            Me.LocalCbx.ValueMember = "LocalID"
+            Me.LocalCbx.SelectedIndex = -1
+
+        End Using
+
+    End Sub
     Sub llenarComboMedidas()
 
         'Permite conexion a base de datos'
@@ -152,7 +185,47 @@ Public Class frmProductos
 
     End Sub
 
+    Sub obtenerMAXID_Producto()
+
+        'Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Resultado de lo que se trae de la tabla'
+        Dim dt As DataTable
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+
+        Using (sqlCon)
+
+            Dim sqlComm As New SqlCommand()
+            'se hace la referencia a la conexión con la bd'
+            sqlComm.Connection = sqlCon
+            'se indica el nombre del stored procedure y el tipo'
+            sqlComm.CommandText = "sp_MaxProductoID" '
+            'Tipo de comando'
+            sqlComm.CommandType = CommandType.StoredProcedure
+            sqlad = New SqlDataAdapter(sqlComm)
+            dt = New DataTable("Datos")
+            'Llena el data table con la informacion que captura el sql adapter con el sp'
+            sqlad.Fill(dt)
+            Me.Proveedor_cbx.DataSource = dt
+            'DisplayMember: Lo que se va a mostrar al usuario'
+            Me.Proveedor_cbx.DisplayMember = "NombreProveedor"
+            'ValueMember: Codigo que va enrrolado'
+            Me.Proveedor_cbx.ValueMember = "ProveedorID"
+            Me.Proveedor_cbx.SelectedIndex = -1
+
+        End Using
+
+    End Sub
+
     Private Sub NuevoButton_Click(sender As Object, e As EventArgs) Handles NuevoButton.Click
+
+        'Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+        Dim n As Integer
+
         If (Me.ValidateChildren = True And Nombre_Tbx.Text <> "") And (Me.ValidateChildren = True And Precio_Tbx.Text <> "") And (Me.ValidateChildren = True And Proveedor_cbx.Text <> "") And (Me.ValidateChildren = True And CategoriaCbx.Text <> "") And (Me.ValidateChildren = True And MedidaCbx.Text <> "") Then
             Try
 
@@ -163,12 +236,34 @@ Public Class frmProductos
                 ep.ProveedorID = Proveedor_cbx.SelectedValue
 
                 If func.Insetar_Producto("sp_InsertarProductos", ep) Then
+
                     MessageBox.Show("Producto insertado correctamente!", "Insertando Producto...")
                     Proveedor_cbx.Text = ""
                     Precio_Tbx.Text = ""
                     CategoriaCbx.Text = ""
                     MedidaCbx.Text = ""
                     Nombre_Tbx.Text = ""
+
+                    Using (sqlCon)
+
+                        Dim sqlComm As New SqlCommand()
+                        'se hace la referencia a la conexión con la bd'
+                        sqlComm.Connection = sqlCon
+                        'se indica el nombre del stored procedure y el tipo'
+                        sqlCon.Open()
+                        sqlComm.CommandText = "sp_MaxProductoID" '
+                        'Tipo de comando'
+                        sqlComm.CommandType = CommandType.StoredProcedure
+                        Dim dataR As SqlDataReader
+                        dataR = sqlComm.ExecuteReader()
+                        If dataR.Read() Then
+                            n = dataR.GetInt32(0)
+                            func.InsertarInventarioXLocal("sp_InsertarInventarioXLocal", n)
+                        End If
+
+
+                    End Using
+
                 Else
                     MessageBox.Show("Producto no insertado!", "Insertando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Proveedor_cbx.Text = ""
@@ -185,6 +280,7 @@ Public Class frmProductos
         End If
         Proveedor_cbx.Text = ""
         llenarComboProductos()
+
     End Sub
 
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
@@ -318,6 +414,41 @@ Public Class frmProductos
             End Try
         Else
             MessageBox.Show("Debe ingresar el ID de un producto", "Modificando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub VerStock_Click(sender As Object, e As EventArgs) Handles VerStock.Click
+        'Permite conexion a base de datos'
+        Dim sqlad As SqlDataAdapter
+        'Crea instancia de la variable'
+        sqlCon = New SqlConnection(conn)
+
+        If (Me.ValidateChildren = True And ID_Txb.Text <> "") And (Me.ValidateChildren = True And LocalCbx.Text <> "") Then
+            Try
+
+                Using (sqlCon)
+
+                    Dim sqlComm As New SqlCommand()
+                    'se hace la referencia a la conexión con la bd'
+                    sqlComm.Connection = sqlCon
+                    'se indica el nombre del stored procedure y el tipo'
+                    sqlCon.Open()
+                    sqlComm.CommandText = "sp_StockLocalXProducto" '
+                    sqlComm.Parameters.AddWithValue("@ProductoID", ID_Txb.Text)
+                    sqlComm.Parameters.AddWithValue("@LocalID", LocalCbx.SelectedValue)
+                    'Tipo de comando'
+                    sqlComm.CommandType = CommandType.StoredProcedure
+                    Dim dataR As SqlDataReader
+                    dataR = sqlComm.ExecuteReader()
+
+                    If dataR.Read() Then
+                        VerStock.Text = dataR.GetSqlInt32(0)
+                    End If
+
+                End Using
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
         End If
     End Sub
 End Class

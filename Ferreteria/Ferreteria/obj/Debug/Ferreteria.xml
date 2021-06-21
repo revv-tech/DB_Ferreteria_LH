@@ -32,12 +32,32 @@ Ferreteria
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Ferreteria.My.Resources.Resources.checkout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.checkout1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.clear">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Ferreteria.My.Resources.Resources.disco_flexible">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Ferreteria.My.Resources.Resources.editar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.minititle">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -83,6 +103,11 @@ Ferreteria
 </summary>
 </member>
 <member name="P:Ferreteria.My.Resources.Resources.search">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.ShoppingCart">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

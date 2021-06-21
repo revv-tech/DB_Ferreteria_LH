@@ -113,6 +113,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FerreteriaLosHermanosDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmCarrito.Designer.vb">
+      <DependentUpon>frmCarrito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarrito.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCategorias.Designer.vb">
       <DependentUpon>frmCategorias.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
   <ItemGroup>
     <EmbeddedResource Include="fmFerreteria.resx">
       <DependentUpon>fmFerreteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarrito.resx">
+      <DependentUpon>frmCarrito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.vb</DependentUpon>
@@ -382,6 +391,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShoppingCart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minititle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
