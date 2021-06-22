@@ -415,6 +415,7 @@ Public Class frmProductos
         Else
             MessageBox.Show("Debe ingresar el ID de un producto", "Modificando Producto...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboProductos()
     End Sub
 
     Private Sub VerStock_Click(sender As Object, e As EventArgs) Handles VerStock.Click
@@ -442,7 +443,7 @@ Public Class frmProductos
                     dataR = sqlComm.ExecuteReader()
 
                     If dataR.Read() Then
-                        VerStock.Text = dataR.GetSqlInt32(0)
+                        VerStock_tbx.Text = dataR.GetSqlInt32(0)
                     End If
 
                 End Using
@@ -450,5 +451,28 @@ Public Class frmProductos
                 MsgBox(ex.Message)
             End Try
         End If
+    End Sub
+
+    Private Sub Update_Stock_Click(sender As Object, e As EventArgs) Handles Update_Stock.Click
+        If (Me.ValidateChildren = True And LocalCbx.Text <> "") And (Me.ValidateChildren = True And ID_Txb.Text <> "") And (Me.ValidateChildren = True And VerStock_tbx.Text <> "") Then
+            Try
+                ep.LocalId = LocalCbx.SelectedValue
+                ep.ProductoID = ID_Txb.Text
+                ep.Cantidad_Ingreso = VerStock_tbx.Text
+
+                If func.ModificarStock("sp_ModificarInventarios", ep) Then
+                    MessageBox.Show("Stock modificado!", "Modificando Stock...")
+
+                Else
+                    MessageBox.Show("Producto no encontrado!", "Modificando Stock...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Debe ingresar el ID de un producto", "Modificando Stock...", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+        llenarComboProductos()
     End Sub
 End Class

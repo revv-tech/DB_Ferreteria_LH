@@ -48,6 +48,7 @@ Public Class frmEmpleados
         Else
             MessageBox.Show("Debe ingresar los datos de la empleado a insertar", "Insertando Empleado...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboEmpleados()
     End Sub
     Sub llenarComboLocales()
 
@@ -104,6 +105,7 @@ Public Class frmEmpleados
         Else
             MessageBox.Show("Debe ingresar el ID de un Empleado", "Eliminado Empleado...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboEmpleados()
     End Sub
 
     Sub llenarComboEmpleados()
@@ -215,6 +217,7 @@ Public Class frmEmpleados
         Else
             MessageBox.Show("Debe ingresar el ID de un empleado", "Modificando Empleado...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboEmpleados()
     End Sub
 
 End Class

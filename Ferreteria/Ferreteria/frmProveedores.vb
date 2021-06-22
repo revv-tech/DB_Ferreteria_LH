@@ -80,6 +80,7 @@ Public Class frmProveedores
         Else
             MessageBox.Show("Debe ingresar los datos de la proveedor a insertar", "Insertando Proveedor...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboProveedores()
     End Sub
 
     Private Sub SalirButton_Click_1(sender As Object, e As EventArgs) Handles SalirButton.Click

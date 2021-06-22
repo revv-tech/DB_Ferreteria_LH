@@ -21,10 +21,6 @@
         frmProductos.Show()
     End Sub
 
-    Private Sub InventariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventariosToolStripMenuItem.Click
-        frmInventarios.Show()
-    End Sub
-
     Private Sub LocalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalesToolStripMenuItem.Click
         frmLocales.Show()
     End Sub

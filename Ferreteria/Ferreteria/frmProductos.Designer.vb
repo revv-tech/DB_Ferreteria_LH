@@ -24,7 +24,8 @@ Partial Class frmProductos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.VerStock = New System.Windows.Forms.Button()
+        Me.VerStock_tbx = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.LocalCbx = New System.Windows.Forms.ComboBox()
         Me.Productos_cbx = New System.Windows.Forms.ComboBox()
@@ -52,15 +53,16 @@ Partial Class frmProductos
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
-        Me.VerStock = New System.Windows.Forms.Button()
+        Me.Update_Stock = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Update_Stock)
         Me.GroupBox1.Controls.Add(Me.VerStock)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.VerStock_tbx)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.LocalCbx)
         Me.GroupBox1.Controls.Add(Me.Productos_cbx)
@@ -84,12 +86,26 @@ Partial Class frmProductos
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
-        'TextBox1
+        'VerStock
         '
-        Me.TextBox1.Location = New System.Drawing.Point(710, 123)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox1.TabIndex = 38
+        Me.VerStock.BackColor = System.Drawing.Color.Green
+        Me.VerStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.VerStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VerStock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VerStock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.VerStock.Location = New System.Drawing.Point(589, 123)
+        Me.VerStock.Name = "VerStock"
+        Me.VerStock.Size = New System.Drawing.Size(115, 23)
+        Me.VerStock.TabIndex = 39
+        Me.VerStock.Text = "Ver Stock: "
+        Me.VerStock.UseVisualStyleBackColor = False
+        '
+        'VerStock_tbx
+        '
+        Me.VerStock_tbx.Location = New System.Drawing.Point(710, 123)
+        Me.VerStock_tbx.Name = "VerStock_tbx"
+        Me.VerStock_tbx.Size = New System.Drawing.Size(130, 20)
+        Me.VerStock_tbx.TabIndex = 38
         '
         'Label13
         '
@@ -358,19 +374,19 @@ Partial Class frmProductos
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
         '
-        'VerStock
+        'Update_Stock
         '
-        Me.VerStock.BackColor = System.Drawing.Color.Green
-        Me.VerStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.VerStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VerStock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VerStock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.VerStock.Location = New System.Drawing.Point(589, 123)
-        Me.VerStock.Name = "VerStock"
-        Me.VerStock.Size = New System.Drawing.Size(115, 23)
-        Me.VerStock.TabIndex = 39
-        Me.VerStock.Text = "Ver Stock: "
-        Me.VerStock.UseVisualStyleBackColor = False
+        Me.Update_Stock.BackColor = System.Drawing.Color.Red
+        Me.Update_Stock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Update_Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Update_Stock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Update_Stock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Update_Stock.Location = New System.Drawing.Point(468, 123)
+        Me.Update_Stock.Name = "Update_Stock"
+        Me.Update_Stock.Size = New System.Drawing.Size(115, 23)
+        Me.Update_Stock.TabIndex = 40
+        Me.Update_Stock.Text = "Actualizar Stock "
+        Me.Update_Stock.UseVisualStyleBackColor = False
         '
         'frmProductos
         '
@@ -415,8 +431,9 @@ Partial Class frmProductos
     Friend WithEvents CategoriaCbx As ComboBox
     Friend WithEvents Productos_cbx As ComboBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents VerStock_tbx As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents LocalCbx As ComboBox
     Friend WithEvents VerStock As Button
+    Friend WithEvents Update_Stock As Button
 End Class

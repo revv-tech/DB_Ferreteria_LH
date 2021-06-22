@@ -73,7 +73,7 @@ Public Class frmLocales
         Else
             MessageBox.Show("Debe ingresar los datos de la local a insertar", "Insertando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
+        llenarComboLocales()
     End Sub
 
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
@@ -94,6 +94,7 @@ Public Class frmLocales
         Else
             MessageBox.Show("Debe ingresar el ID de un local", "Eliminado Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboLocales()
     End Sub
 
     Sub llenarComboLocales()
@@ -193,6 +194,7 @@ Public Class frmLocales
         Else
             MessageBox.Show("Debe ingresar el ID de un local", "Modificando Local...", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        llenarComboLocales()
     End Sub
 
 End Class

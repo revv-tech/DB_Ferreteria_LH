@@ -31,7 +31,6 @@ Partial Class fmFerreteria
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LocalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InventariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,7 +55,7 @@ Partial Class fmFerreteria
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.LocalesToolStripMenuItem, Me.MedidasToolStripMenuItem, Me.InventariosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.FacturasToolStripMenuItem, Me.TiposDeVentaToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.LocalesToolStripMenuItem, Me.MedidasToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TiposDeVentaToolStripMenuItem, Me.FacturasToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
@@ -64,61 +63,55 @@ Partial Class fmFerreteria
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
-        Me.CategoriasToolStripMenuItem.Text = "Categorias"
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CategoriasToolStripMenuItem.Text = "Categorías"
         '
         'LocalesToolStripMenuItem
         '
         Me.LocalesToolStripMenuItem.Name = "LocalesToolStripMenuItem"
-        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LocalesToolStripMenuItem.Text = "Locales"
         '
         'MedidasToolStripMenuItem
         '
         Me.MedidasToolStripMenuItem.Name = "MedidasToolStripMenuItem"
-        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MedidasToolStripMenuItem.Text = "Medidas"
-        '
-        'InventariosToolStripMenuItem
-        '
-        Me.InventariosToolStripMenuItem.Name = "InventariosToolStripMenuItem"
-        Me.InventariosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
-        Me.InventariosToolStripMenuItem.Text = "Inventarios"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'FacturasToolStripMenuItem
         '
         Me.FacturasToolStripMenuItem.Name = "FacturasToolStripMenuItem"
-        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FacturasToolStripMenuItem.Text = "Facturas"
         '
         'TiposDeVentaToolStripMenuItem
         '
         Me.TiposDeVentaToolStripMenuItem.Name = "TiposDeVentaToolStripMenuItem"
-        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.TiposDeVentaToolStripMenuItem.Text = "Tipo de Pago"
         '
         'FacturaciónToolStripMenuItem
@@ -162,9 +155,9 @@ Partial Class fmFerreteria
         Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
         Me.PictureBox1.Image = Global.Ferreteria.My.Resources.Resources.title
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(160, 64)
+        Me.PictureBox1.Location = New System.Drawing.Point(159, 62)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(473, 301)
+        Me.PictureBox1.Size = New System.Drawing.Size(468, 301)
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
@@ -202,7 +195,6 @@ Partial Class fmFerreteria
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MedidasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InventariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FacturasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiposDeVentaToolStripMenuItem As ToolStripMenuItem

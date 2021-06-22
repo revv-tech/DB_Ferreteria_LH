@@ -113,6 +113,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FerreteriaLosHermanosDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FerreteriaLosHermanosDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FerreteriaLosHermanosDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FerreteriaLosHermanosDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FerreteriaLosHermanosDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCarrito.Designer.vb">
       <DependentUpon>frmCarrito.vb</DependentUpon>
     </Compile>
@@ -148,12 +158,6 @@
       <DependentUpon>frmFacturas.vb</DependentUpon>
     </Compile>
     <Compile Include="frmFacturas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInventarios.Designer.vb">
-      <DependentUpon>frmInventarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmInventarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLocales.Designer.vb">
@@ -223,9 +227,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFacturas.resx">
       <DependentUpon>frmFacturas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInventarios.resx">
-      <DependentUpon>frmInventarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLocales.resx">
       <DependentUpon>frmLocales.vb</DependentUpon>
@@ -337,6 +338,28 @@
     </None>
     <None Include="FerreteriaLosHermanosDataSet7.xss">
       <DependentUpon>FerreteriaLosHermanosDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet8.xsc">
+      <DependentUpon>FerreteriaLosHermanosDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FerreteriaLosHermanosDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet8.xss">
+      <DependentUpon>FerreteriaLosHermanosDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet9.xsc">
+      <DependentUpon>FerreteriaLosHermanosDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FerreteriaLosHermanosDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FerreteriaLosHermanosDataSet9.xss">
+      <DependentUpon>FerreteriaLosHermanosDataSet9.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

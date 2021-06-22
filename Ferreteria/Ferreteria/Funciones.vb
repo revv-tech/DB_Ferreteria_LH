@@ -51,6 +51,30 @@ Public Class Funciones
             cn.Close()
         End Try
     End Function
+
+    Public Function ModificarStock(nombreSp As String, ByVal data As Propiedades) As Boolean
+        Try
+            cn.Open()
+            cmd = New SqlCommand(nombreSp, cn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@ProductoID", data.ProductoID)
+            cmd.Parameters.AddWithValue("@LocalID", data.LocalId)
+            cmd.Parameters.AddWithValue("@Stock", data.Cantidad_Ingreso)
+
+            If cmd.ExecuteNonQuery() Then
+                Return True
+            Else
+                Return False
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            cn.Close()
+        End Try
+    End Function
     'Atualizar Sp'
     Public Function Modificar_Proveedor_Cliente_Local(nombreSp As String, ByVal data As Propiedades) As Boolean
 
