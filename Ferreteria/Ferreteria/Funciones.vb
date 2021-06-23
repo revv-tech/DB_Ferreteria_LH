@@ -180,6 +180,8 @@ Public Class Funciones
     End Function
 
 
+
+
     Public Function Insetar_Empleado(nombreSp As String, ByVal data As Propiedades) As Boolean
 
         Try
@@ -375,8 +377,8 @@ Public Class Funciones
 
             cmd.Parameters.AddWithValue("@cantidad", data.Cantidad_Ingreso)
             cmd.Parameters.AddWithValue("@precio", data.Precio_Producto)
-            cmd.Parameters.AddWithValue("@totalLinea", data.Total_)
-            cmd.Parameters.AddWithValue("@ProductoID", data.ProductoID)
+            cmd.Parameters.AddWithValue("@totalLinea", data.Total_Linea)
+            cmd.Parameters.AddWithValue("@ProductoID", data.id_)
             cmd.Parameters.AddWithValue("@FacturaID", data.FacturaID_)
 
 
@@ -402,8 +404,8 @@ Public Class Funciones
             cmd.CommandType = CommandType.StoredProcedure
 
 
-            cmd.Parameters.AddWithValue("@direccion", data.Direccion_)
-            cmd.Parameters.AddWithValue("@fecha", data.Fecha_)
+
+            cmd.Parameters.AddWithValue("@fecha", Date.Now)
             cmd.Parameters.AddWithValue("@impuesto", data.Impuesto_)
             cmd.Parameters.AddWithValue("@subtotal", data.Subtotal_)
             cmd.Parameters.AddWithValue("@total", data.Total_)
@@ -459,30 +461,6 @@ Public Class Funciones
 
             cmd.Parameters.AddWithValue("@ID", data.id_)
             cmd.Parameters.AddWithValue("@descripcion", data.Descripcion_)
-
-
-            If cmd.ExecuteNonQuery() Then
-                Return True
-            Else
-                Return False
-
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Return False
-        Finally
-            cn.Close()
-        End Try
-    End Function
-
-    Public Function Insetar_Factura(nombreSp As String, ByVal data As Propiedades) As Boolean
-
-        Try
-            cn.Open()
-            cmd = New SqlCommand(nombreSp, cn)
-            cmd.CommandType = CommandType.StoredProcedure
-
-            cmd.Parameters.AddWithValue("@Descripcion", data.Descripcion_)
 
 
             If cmd.ExecuteNonQuery() Then

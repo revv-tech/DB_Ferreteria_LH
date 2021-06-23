@@ -33,10 +33,6 @@
         frmClientes.Show()
     End Sub
 
-    Private Sub FacturasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturasToolStripMenuItem.Click
-        frmFacturas.Show()
-    End Sub
-
     Private Sub TiposDeVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TiposDeVentaToolStripMenuItem.Click
         frmTiposDeVenta.Show()
     End Sub
@@ -46,6 +42,6 @@
     End Sub
 
     Private Sub FacturaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturaciónToolStripMenuItem.Click
-        frmCarrito.Show()
+        Carrito.Show()
     End Sub
 End Class

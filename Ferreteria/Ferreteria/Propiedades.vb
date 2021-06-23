@@ -16,6 +16,7 @@
     Private factura_ID As Integer
     Private subtotal As Integer
     Private impuesto As Integer
+    Private totalLinea As Integer
     Private total As Integer
     Private medida_ID As Integer
     Private fecha As Date
@@ -185,6 +186,16 @@
 
         Set(value As Integer)
             CantidadIngreso = value
+        End Set
+    End Property
+
+    Public Property Total_Linea As Integer
+        Get
+            Return totalLinea
+        End Get
+
+        Set(value As Integer)
+            totalLinea = value
         End Set
     End Property
 

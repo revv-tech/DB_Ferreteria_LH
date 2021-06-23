@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCarrito
+Partial Class Carrito
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmCarrito
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCarrito))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carrito))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SalirButton = New System.Windows.Forms.Button()
         Me.LocalCbx = New System.Windows.Forms.ComboBox()
@@ -38,19 +38,34 @@ Partial Class frmCarrito
         Me.Cliente = New System.Windows.Forms.Button()
         Me.Cliente_cbx = New System.Windows.Forms.ComboBox()
         Me.Empleado = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Empleado_cbx = New System.Windows.Forms.ComboBox()
         Me.Facturacion = New System.Windows.Forms.Button()
-        Me.TipoDePago_cbx = New System.Windows.Forms.ComboBox()
+        Me.TipoDeVenta_cbx = New System.Windows.Forms.ComboBox()
         Me.Tipo_De_Pago = New System.Windows.Forms.Button()
         Me.Buscar_Producto = New System.Windows.Forms.Button()
         Me.Subtotal_tbx = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Facturacion_Button = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Agregar_Pro = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Cantidad_Producto = New System.Windows.Forms.TextBox()
+        Me.Agregar_Button = New System.Windows.Forms.Button()
+        Me.Factura_Pedidos = New System.Windows.Forms.DataGridView()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Total_tbx = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Impuesto_tbx = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Reinicia = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosXLocal_dt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet9BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpStockLocalXProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Factura_Pedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -136,12 +151,12 @@ Partial Class frmCarrito
         '
         'Agregar_Producto
         '
-        Me.Agregar_Producto.BackColor = System.Drawing.Color.Red
+        Me.Agregar_Producto.BackColor = System.Drawing.Color.Green
         Me.Agregar_Producto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Agregar_Producto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Agregar_Producto.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Agregar_Producto.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Agregar_Producto.Location = New System.Drawing.Point(340, 591)
+        Me.Agregar_Producto.Location = New System.Drawing.Point(603, 480)
         Me.Agregar_Producto.Name = "Agregar_Producto"
         Me.Agregar_Producto.Size = New System.Drawing.Size(115, 23)
         Me.Agregar_Producto.TabIndex = 41
@@ -183,18 +198,18 @@ Partial Class frmCarrito
         Me.Empleado.Name = "Empleado"
         Me.Empleado.Size = New System.Drawing.Size(130, 23)
         Me.Empleado.TabIndex = 44
-        Me.Empleado.Text = "Añadir Empleado"
+        Me.Empleado.Text = "Buscar Empleado"
         Me.Empleado.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'Empleado_cbx
         '
-        Me.ComboBox1.DisplayMember = "Nombre"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(739, 93)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(449, 21)
-        Me.ComboBox1.TabIndex = 45
-        Me.ComboBox1.ValueMember = "LocalID"
+        Me.Empleado_cbx.DisplayMember = "Nombre"
+        Me.Empleado_cbx.FormattingEnabled = True
+        Me.Empleado_cbx.Location = New System.Drawing.Point(739, 93)
+        Me.Empleado_cbx.Name = "Empleado_cbx"
+        Me.Empleado_cbx.Size = New System.Drawing.Size(449, 21)
+        Me.Empleado_cbx.TabIndex = 45
+        Me.Empleado_cbx.ValueMember = "LocalID"
         '
         'Facturacion
         '
@@ -210,15 +225,15 @@ Partial Class frmCarrito
         Me.Facturacion.Text = "Facturación"
         Me.Facturacion.UseVisualStyleBackColor = False
         '
-        'TipoDePago_cbx
+        'TipoDeVenta_cbx
         '
-        Me.TipoDePago_cbx.DisplayMember = "Nombre"
-        Me.TipoDePago_cbx.FormattingEnabled = True
-        Me.TipoDePago_cbx.Location = New System.Drawing.Point(739, 122)
-        Me.TipoDePago_cbx.Name = "TipoDePago_cbx"
-        Me.TipoDePago_cbx.Size = New System.Drawing.Size(449, 21)
-        Me.TipoDePago_cbx.TabIndex = 48
-        Me.TipoDePago_cbx.ValueMember = "LocalID"
+        Me.TipoDeVenta_cbx.DisplayMember = "Nombre"
+        Me.TipoDeVenta_cbx.FormattingEnabled = True
+        Me.TipoDeVenta_cbx.Location = New System.Drawing.Point(739, 122)
+        Me.TipoDeVenta_cbx.Name = "TipoDeVenta_cbx"
+        Me.TipoDeVenta_cbx.Size = New System.Drawing.Size(449, 21)
+        Me.TipoDeVenta_cbx.TabIndex = 48
+        Me.TipoDeVenta_cbx.ValueMember = "LocalID"
         '
         'Tipo_De_Pago
         '
@@ -250,7 +265,7 @@ Partial Class frmCarrito
         '
         'Subtotal_tbx
         '
-        Me.Subtotal_tbx.Location = New System.Drawing.Point(461, 592)
+        Me.Subtotal_tbx.Location = New System.Drawing.Point(724, 481)
         Me.Subtotal_tbx.Name = "Subtotal_tbx"
         Me.Subtotal_tbx.Size = New System.Drawing.Size(136, 20)
         Me.Subtotal_tbx.TabIndex = 49
@@ -259,21 +274,203 @@ Partial Class frmCarrito
         '
         Me.TextBox1.Location = New System.Drawing.Point(133, 592)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(464, 20)
         Me.TextBox1.TabIndex = 50
         '
-        'frmCarrito
+        'Facturacion_Button
+        '
+        Me.Facturacion_Button.BackColor = System.Drawing.Color.Green
+        Me.Facturacion_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Facturacion_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Facturacion_Button.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Facturacion_Button.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Facturacion_Button.Location = New System.Drawing.Point(1231, 138)
+        Me.Facturacion_Button.Name = "Facturacion_Button"
+        Me.Facturacion_Button.Size = New System.Drawing.Size(130, 47)
+        Me.Facturacion_Button.TabIndex = 51
+        Me.Facturacion_Button.Text = "Finalizar Compra"
+        Me.Facturacion_Button.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.Location = New System.Drawing.Point(603, 149)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(130, 23)
+        Me.Button1.TabIndex = 52
+        Me.Button1.Text = "Producto:"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Agregar_Pro
+        '
+        Me.Agregar_Pro.DisplayMember = "Nombre"
+        Me.Agregar_Pro.FormattingEnabled = True
+        Me.Agregar_Pro.Location = New System.Drawing.Point(739, 151)
+        Me.Agregar_Pro.Name = "Agregar_Pro"
+        Me.Agregar_Pro.Size = New System.Drawing.Size(316, 21)
+        Me.Agregar_Pro.TabIndex = 53
+        Me.Agregar_Pro.ValueMember = "LocalID"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button2.Location = New System.Drawing.Point(603, 178)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(130, 23)
+        Me.Button2.TabIndex = 54
+        Me.Button2.Text = "Cantidad:"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Cantidad_Producto
+        '
+        Me.Cantidad_Producto.Location = New System.Drawing.Point(739, 179)
+        Me.Cantidad_Producto.Name = "Cantidad_Producto"
+        Me.Cantidad_Producto.Size = New System.Drawing.Size(165, 20)
+        Me.Cantidad_Producto.TabIndex = 55
+        '
+        'Agregar_Button
+        '
+        Me.Agregar_Button.BackColor = System.Drawing.Color.Red
+        Me.Agregar_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Agregar_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Agregar_Button.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Agregar_Button.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Agregar_Button.Location = New System.Drawing.Point(1070, 171)
+        Me.Agregar_Button.Name = "Agregar_Button"
+        Me.Agregar_Button.Size = New System.Drawing.Size(118, 28)
+        Me.Agregar_Button.TabIndex = 56
+        Me.Agregar_Button.Text = "Agregar Producto"
+        Me.Agregar_Button.UseVisualStyleBackColor = False
+        '
+        'Factura_Pedidos
+        '
+        Me.Factura_Pedidos.AllowUserToAddRows = False
+        Me.Factura_Pedidos.AllowUserToDeleteRows = False
+        Me.Factura_Pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Factura_Pedidos.Location = New System.Drawing.Point(603, 207)
+        Me.Factura_Pedidos.Name = "Factura_Pedidos"
+        Me.Factura_Pedidos.ReadOnly = True
+        Me.Factura_Pedidos.Size = New System.Drawing.Size(585, 267)
+        Me.Factura_Pedidos.TabIndex = 57
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button3.Location = New System.Drawing.Point(1231, 207)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(130, 47)
+        Me.Button3.TabIndex = 58
+        Me.Button3.Text = "Imprimir Factura"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Red
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button4.Location = New System.Drawing.Point(1231, 280)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(130, 47)
+        Me.Button4.TabIndex = 59
+        Me.Button4.Text = "Eliminar Factura"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Total_tbx
+        '
+        Me.Total_tbx.Location = New System.Drawing.Point(1052, 481)
+        Me.Total_tbx.Name = "Total_tbx"
+        Me.Total_tbx.Size = New System.Drawing.Size(136, 20)
+        Me.Total_tbx.TabIndex = 61
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Green
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button5.Location = New System.Drawing.Point(931, 480)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(115, 23)
+        Me.Button5.TabIndex = 60
+        Me.Button5.Text = "Total:"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Impuesto_tbx
+        '
+        Me.Impuesto_tbx.Location = New System.Drawing.Point(724, 513)
+        Me.Impuesto_tbx.Name = "Impuesto_tbx"
+        Me.Impuesto_tbx.Size = New System.Drawing.Size(136, 20)
+        Me.Impuesto_tbx.TabIndex = 63
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Green
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button6.Location = New System.Drawing.Point(603, 512)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(115, 23)
+        Me.Button6.TabIndex = 62
+        Me.Button6.Text = "Impuesto"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Reinicia
+        '
+        Me.Reinicia.BackColor = System.Drawing.Color.Red
+        Me.Reinicia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Reinicia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Reinicia.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Reinicia.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Reinicia.Location = New System.Drawing.Point(1052, 513)
+        Me.Reinicia.Name = "Reinicia"
+        Me.Reinicia.Size = New System.Drawing.Size(136, 23)
+        Me.Reinicia.TabIndex = 64
+        Me.Reinicia.Text = "Otra compra"
+        Me.Reinicia.UseVisualStyleBackColor = False
+        '
+        'Carrito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Ferreteria.My.Resources.Resources.ShoppingCart
         Me.ClientSize = New System.Drawing.Size(1412, 694)
+        Me.Controls.Add(Me.Reinicia)
+        Me.Controls.Add(Me.Impuesto_tbx)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Total_tbx)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Factura_Pedidos)
+        Me.Controls.Add(Me.Agregar_Button)
+        Me.Controls.Add(Me.Cantidad_Producto)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Agregar_Pro)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Facturacion_Button)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Subtotal_tbx)
-        Me.Controls.Add(Me.TipoDePago_cbx)
+        Me.Controls.Add(Me.TipoDeVenta_cbx)
         Me.Controls.Add(Me.Tipo_De_Pago)
         Me.Controls.Add(Me.Facturacion)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Empleado_cbx)
         Me.Controls.Add(Me.Empleado)
         Me.Controls.Add(Me.Cliente_cbx)
         Me.Controls.Add(Me.Cliente)
@@ -285,14 +482,15 @@ Partial Class frmCarrito
         Me.Controls.Add(Me.SalirButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmCarrito"
-        Me.Text = "frmCarrito"
+        Me.Name = "Carrito"
+        Me.Text = "Carrito"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosXLocal_dt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet9BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FerreteriaLosHermanosDataSet8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpStockLocalXProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Factura_Pedidos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -312,11 +510,25 @@ Partial Class frmCarrito
     Friend WithEvents Cliente As Button
     Friend WithEvents Cliente_cbx As ComboBox
     Friend WithEvents Empleado As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Empleado_cbx As ComboBox
     Friend WithEvents Facturacion As Button
-    Friend WithEvents TipoDePago_cbx As ComboBox
+    Friend WithEvents TipoDeVenta_cbx As ComboBox
     Friend WithEvents Tipo_De_Pago As Button
     Friend WithEvents Buscar_Producto As Button
     Friend WithEvents Subtotal_tbx As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Facturacion_Button As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Agregar_Pro As ComboBox
+    Public WithEvents Button2 As Button
+    Friend WithEvents Cantidad_Producto As TextBox
+    Friend WithEvents Agregar_Button As Button
+    Friend WithEvents Factura_Pedidos As DataGridView
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Total_tbx As TextBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Impuesto_tbx As TextBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Reinicia As Button
 End Class

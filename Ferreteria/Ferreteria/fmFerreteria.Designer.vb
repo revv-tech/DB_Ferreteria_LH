@@ -32,11 +32,14 @@ Partial Class fmFerreteria
         Me.LocalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FacturasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposDeVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacturasPorClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PedidosPorClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventarioPorLocalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InventarioPorProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MostrarBitacoraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirButton = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -46,7 +49,7 @@ Partial Class fmFerreteria
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MantenimientoToolStripMenuItem, Me.FacturaciónToolStripMenuItem, Me.ConsultasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MantenimientoToolStripMenuItem, Me.FacturaciónToolStripMenuItem, Me.ConsultasToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(771, 24)
@@ -55,7 +58,7 @@ Partial Class fmFerreteria
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.LocalesToolStripMenuItem, Me.MedidasToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TiposDeVentaToolStripMenuItem, Me.FacturasToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.LocalesToolStripMenuItem, Me.MedidasToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TiposDeVentaToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
@@ -102,12 +105,6 @@ Partial Class fmFerreteria
         Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
-        'FacturasToolStripMenuItem
-        '
-        Me.FacturasToolStripMenuItem.Name = "FacturasToolStripMenuItem"
-        Me.FacturasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.FacturasToolStripMenuItem.Text = "Facturas"
-        '
         'TiposDeVentaToolStripMenuItem
         '
         Me.TiposDeVentaToolStripMenuItem.Name = "TiposDeVentaToolStripMenuItem"
@@ -122,15 +119,40 @@ Partial Class fmFerreteria
         '
         'ConsultasToolStripMenuItem
         '
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FacturasPorClienteToolStripMenuItem, Me.PedidosPorClienteToolStripMenuItem, Me.InventarioPorLocalToolStripMenuItem, Me.InventarioPorProductoToolStripMenuItem, Me.MostrarBitacoraToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
-        'ReportesToolStripMenuItem
+        'FacturasPorClienteToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        Me.FacturasPorClienteToolStripMenuItem.Name = "FacturasPorClienteToolStripMenuItem"
+        Me.FacturasPorClienteToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.FacturasPorClienteToolStripMenuItem.Text = "Facturas por Cliente"
+        '
+        'PedidosPorClienteToolStripMenuItem
+        '
+        Me.PedidosPorClienteToolStripMenuItem.Name = "PedidosPorClienteToolStripMenuItem"
+        Me.PedidosPorClienteToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.PedidosPorClienteToolStripMenuItem.Text = "Pedidos por Cliente"
+        '
+        'InventarioPorLocalToolStripMenuItem
+        '
+        Me.InventarioPorLocalToolStripMenuItem.Name = "InventarioPorLocalToolStripMenuItem"
+        Me.InventarioPorLocalToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.InventarioPorLocalToolStripMenuItem.Text = "Inventario por Local"
+        '
+        'InventarioPorProductoToolStripMenuItem
+        '
+        Me.InventarioPorProductoToolStripMenuItem.Name = "InventarioPorProductoToolStripMenuItem"
+        Me.InventarioPorProductoToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.InventarioPorProductoToolStripMenuItem.Text = "Inventario por Producto"
+        '
+        'MostrarBitacoraToolStripMenuItem
+        '
+        Me.MostrarBitacoraToolStripMenuItem.Name = "MostrarBitacoraToolStripMenuItem"
+        Me.MostrarBitacoraToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.MostrarBitacoraToolStripMenuItem.Text = "Mostrar Bitacora"
         '
         'AcercaDeToolStripMenuItem
         '
@@ -192,12 +214,15 @@ Partial Class fmFerreteria
     Friend WithEvents LocalesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FacturaciónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MedidasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FacturasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TiposDeVentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirButton As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents FacturasPorClienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PedidosPorClienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioPorLocalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InventarioPorProductoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MostrarBitacoraToolStripMenuItem As ToolStripMenuItem
 End Class
