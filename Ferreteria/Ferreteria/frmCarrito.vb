@@ -4,6 +4,7 @@ Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 
+
 Public Class Carrito
 
     Dim facturaTmp As New Propiedades
@@ -11,6 +12,10 @@ Public Class Carrito
     Dim pedidos As New List(Of Propiedades)
     Dim subtotal As Integer = 0
 
+    Dim NombreClienteSTR As String
+    Dim NombreEmpleadoSTR As String
+    Dim Tipo_De_PagoSTR As String
+    Dim LocalSTR As String
     Private Sub frmCarrito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CenterToScreen()
         llenarComboLocales()
@@ -409,20 +414,172 @@ Public Class Carrito
             Subtotal_tbx.Text = subTotal
             Impuesto_tbx.Text = impuesto
 
+            NombreClienteSTR = Cliente_cbx.Text
+            NombreEmpleadoSTR = Empleado_cbx.Text
+            LocalSTR = LocalCbx.Text
+            Tipo_De_PagoSTR = TipoDeVenta_cbx.Text
+
+            facturaTmp.Total_ = total
+            facturaTmp.Subtotal_ = subTotal
+            facturaTmp.Impuesto_ = impuesto
+
         End If
 
     End Sub
 
-    Private Sub Reinicia_Click(sender As Object, e As EventArgs) Handles Reinicia.Click
-        Total_tbx.Text = ""
-        Subtotal_tbx.Text = ""
-        Impuesto_tbx.Text = ""
-        Factura_Pedidos.DataSource = Nothing
-        subtotal = 0
 
+    Private Sub PDF_Factura_Click(sender As Object, e As EventArgs) Handles PDF_Factura.Click
+
+
+
+
+        If (Factura_Pedidos.Rows.Count > 0) Then
+            Dim Font10 As New Font(FontFactory.GetFont(FontFactory.TIMES_ROMAN, 10, iTextSharp.text.Font.BOLD, BaseColor.GRAY))
+            Dim Font8 As New Font(FontFactory.GetFont(FontFactory.TIMES_ROMAN, 8, iTextSharp.text.Font.NORMAL))
+            Dim FontCells As New Font(FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12, BaseColor.WHITE))
+            Dim save As SaveFileDialog = New SaveFileDialog()
+            save.Filter = "PDF (*.pdf)|*.pdf"
+            save.FileName = "Factura" + facturaTmp.id_.ToString() + ".pdf"
+            Dim ErrorMessage = False
+            If (save.ShowDialog() = DialogResult.OK) Then
+                If (File.Exists(save.FileName)) Then
+
+                    Try
+                        File.Delete(save.FileName)
+                    Catch ex As Exception
+                        ErrorMessage = True
+                        MessageBox.Show("Unable to wride data in disk" + ex.Message)
+                    End Try
+
+                End If
+                If (ErrorMessage <> True) Then
+                    Try
+
+                        'Tabla Encabezado'
+                        Dim imageURL As String = "C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Images\title.png"
+                        Dim imagePNG As iTextSharp.text.Image
+                        imagePNG = iTextSharp.text.Image.GetInstance(imageURL)
+                        imagePNG.ScaleToFit(110.0F, 140.0F)
+                        imagePNG.SetAbsolutePosition(680, 510)
+
+                        Dim pTable As New PdfPTable(Factura_Pedidos.Columns.Count)
+                        pTable.DefaultCell.Padding = 5
+                        pTable.WidthPercentage = 100
+                        pTable.HorizontalAlignment = Element.ALIGN_LEFT
+
+                        'Table Header'
+
+                        For Each Facturas_PedidosColum In Factura_Pedidos.Columns
+                            Dim paraCell As New Paragraph()
+                            paraCell.Alignment = Element.ALIGN_CENTER
+                            paraCell.Add(New Chunk(CStr(Facturas_PedidosColum.HeaderText), Font10))
+                            Dim pCell = New PdfPCell()
+                            pCell.Border = 0
+                            pCell.BorderWidthTop = 0
+
+                            pCell.AddElement(paraCell)
+                            pTable.AddCell(pCell)
+                        Next
+
+                        For Each Facturas_PedidosRow In Factura_Pedidos.Rows
+                            For Each Facturas_PedidosDCell In Facturas_PedidosRow.Cells
+                                Dim paraCell2 As New Paragraph()
+                                paraCell2.Alignment = Element.ALIGN_CENTER
+                                paraCell2.Add(New Chunk(Facturas_PedidosDCell.Value.ToString(), Font8))
+                                Dim pCell2 = New PdfPCell()
+                                pCell2.Border = 0
+                                pCell2.BorderWidthTop = 0
+                                pCell2.AddElement(paraCell2)
+                                pTable.AddCell(pCell2)
+
+                            Next
+                        Next
+
+                        Dim fStream As New FileStream(save.FileName, FileMode.Create)
+
+                        Using (fStream)
+                            'HEADER'
+                            Dim strHeader As String
+                            strHeader = "Factura # " + facturaTmp.id_.ToString()
+                            Dim doc As New Document(PageSize.A4.Rotate, 40, 40, 80, 20)
+                            PdfWriter.GetInstance(doc, fStream)
+                            Dim Font88 As New Font(FontFactory.GetFont(FontFactory.TIMES_ROMAN, 20, iTextSharp.text.Font.BOLD, BaseColor.BLUE))
+                            Dim prgHeading As New Paragraph()
+                            prgHeading.Alignment = Element.ALIGN_CENTER
+                            prgHeading.Add(New Chunk(strHeader.ToUpper(), Font88))
+                            'CLIENTE'
+                            Dim nombreCliente As String
+                            Dim idCliente As String
+                            idCliente = "ID Cliente: " + facturaTmp.Cliente_.ToString()
+                            nombreCliente = "Nombre Cliente: " + NombreClienteSTR
+                            Dim cliente As New Paragraph()
+                            cliente.Alignment = Element.ALIGN_LEFT
+                            cliente.Add(New Chunk(idCliente, Font10))
+                            Dim cliente2 As New Paragraph()
+                            cliente2.Alignment = Element.ALIGN_LEFT
+                            cliente2.Add(New Chunk(NombreClienteSTR, Font10))
+                            'LOCAL Y EMPLEADO'
+                            Dim local As New Paragraph()
+                            Dim empleado As New Paragraph()
+                            local.Add(New Chunk("Local " + LocalSTR, Font10))
+                            empleado.Add(New Chunk("Empleado: " + NombreEmpleadoSTR, Font10))
+                            'FECHA'
+                            Dim fecha As New Date
+                            fecha = Date.Now
+                            fecha.ToUniversalTime()
+                            Dim fechaPr As New Paragraph()
+                            fechaPr.Add(New Chunk("Fecha:       " + fecha.ToString(), Font10))
+                            fechaPr.Alignment = Element.ALIGN_RIGHT
+                            'LINEA'
+                            Dim linea As New Paragraph(New Chunk(New iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)))
+                            'TOTAL, SUBTOTAL, Y IMPUESTO'
+                            Dim subtotal As New Paragraph(New Chunk("Subtotal: " + facturaTmp.Subtotal_.ToString(), Font10))
+                            subtotal.Alignment = Element.ALIGN_RIGHT
+                            Dim impuesto As New Paragraph(New Chunk("Impuesto: " + facturaTmp.Impuesto_.ToString(), Font10))
+                            impuesto.Alignment = Element.ALIGN_RIGHT
+                            Dim total As New Paragraph(New Chunk("Total: " + facturaTmp.Total_.ToString(), Font10))
+                            total.Alignment = Element.ALIGN_RIGHT
+                            'TIPO DE PAGO'
+                            Dim tDP As New Paragraph()
+                            tDP.Add(New Chunk("Tipo de Pago: " + Tipo_De_PagoSTR, Font10))
+
+                            'ESTRUCTURA DEL PDF'
+                            doc.Open()
+                            doc.Add(prgHeading)
+                            doc.Add(imagePNG)
+
+                            doc.Add(local)
+                            doc.Add(empleado)
+                            doc.Add(cliente)
+                            doc.Add(cliente2)
+                            doc.Add(tDP)
+                            doc.Add(fechaPr)
+                            doc.Add(linea)
+                            doc.Add(pTable)
+                            doc.Add(New Chunk(vbCrLf, Font8))
+                            doc.Add(linea)
+                            doc.Add(subtotal)
+                            doc.Add(impuesto)
+                            doc.Add(total)
+
+                            doc.Close()
+
+                            fStream.Close()
+                        End Using
+                        MessageBox.Show("Gracias por su compra!", "Compra realizada")
+                    Catch ex As Exception
+                        MessageBox.Show("Error while exporting Data" + ex.Message)
+                    End Try
+
+                End If
+            End If
+        Else
+            MessageBox.Show("No se pudo realizar la factura")
+        End If
+
+
+        Me.Close()
     End Sub
-
-
 
 
 End Class

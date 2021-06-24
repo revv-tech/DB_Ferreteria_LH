@@ -57,7 +57,6 @@ Partial Class Carrito
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Impuesto_tbx = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Reinicia = New System.Windows.Forms.Button()
         Me.Factura_Pedidos = New System.Windows.Forms.DataGridView()
         Me.PDF_Factura = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -303,7 +302,7 @@ Partial Class Carrito
         Me.Facturacion_Button.Name = "Facturacion_Button"
         Me.Facturacion_Button.Size = New System.Drawing.Size(130, 47)
         Me.Facturacion_Button.TabIndex = 51
-        Me.Facturacion_Button.Text = "Finalizar Compra"
+        Me.Facturacion_Button.Text = "Generar Factura"
         Me.Facturacion_Button.UseVisualStyleBackColor = False
         '
         'Button1
@@ -407,20 +406,6 @@ Partial Class Carrito
         Me.Button6.Text = "Impuesto"
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Reinicia
-        '
-        Me.Reinicia.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Reinicia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Reinicia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Reinicia.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Reinicia.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Reinicia.Location = New System.Drawing.Point(1231, 191)
-        Me.Reinicia.Name = "Reinicia"
-        Me.Reinicia.Size = New System.Drawing.Size(130, 45)
-        Me.Reinicia.TabIndex = 64
-        Me.Reinicia.Text = "Nueva Compra"
-        Me.Reinicia.UseVisualStyleBackColor = False
-        '
         'Factura_Pedidos
         '
         Me.Factura_Pedidos.AllowUserToAddRows = False
@@ -457,7 +442,7 @@ Partial Class Carrito
         Me.PDF_Factura.Name = "PDF_Factura"
         Me.PDF_Factura.Size = New System.Drawing.Size(257, 47)
         Me.PDF_Factura.TabIndex = 66
-        Me.PDF_Factura.Text = "Ver Factura"
+        Me.PDF_Factura.Text = "Imprimir Factura"
         Me.PDF_Factura.UseVisualStyleBackColor = False
         '
         'Carrito
@@ -468,7 +453,6 @@ Partial Class Carrito
         Me.ClientSize = New System.Drawing.Size(1412, 694)
         Me.Controls.Add(Me.PDF_Factura)
         Me.Controls.Add(Me.Factura_Pedidos)
-        Me.Controls.Add(Me.Reinicia)
         Me.Controls.Add(Me.Impuesto_tbx)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Total_tbx)
@@ -541,7 +525,6 @@ Partial Class Carrito
     Friend WithEvents Button5 As Button
     Friend WithEvents Impuesto_tbx As TextBox
     Friend WithEvents Button6 As Button
-    Friend WithEvents Reinicia As Button
     Friend WithEvents Factura_Pedidos As DataGridView
     Friend WithEvents PDF_Factura As Button
 End Class
