@@ -1,9 +1,8 @@
-﻿Imports System.Data
+﻿
 Imports System.Data.SqlClient
+Imports System.IO
 Imports iTextSharp.text
-
-
-
+Imports iTextSharp.text.pdf
 
 Public Class Carrito
 
@@ -423,7 +422,7 @@ Public Class Carrito
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-    End Sub
+
+
 End Class

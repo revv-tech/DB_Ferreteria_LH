@@ -23,6 +23,8 @@ Partial Class Carrito
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carrito))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SalirButton = New System.Windows.Forms.Button()
@@ -51,14 +53,13 @@ Partial Class Carrito
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Cantidad_Producto = New System.Windows.Forms.TextBox()
         Me.Agregar_Button = New System.Windows.Forms.Button()
-        Me.Factura_Pedidos = New System.Windows.Forms.DataGridView()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Total_tbx = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Impuesto_tbx = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Reinicia = New System.Windows.Forms.Button()
+        Me.Factura_Pedidos = New System.Windows.Forms.DataGridView()
+        Me.PDF_Factura = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosXLocal_dt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FerreteriaLosHermanosDataSet9BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,7 +85,7 @@ Partial Class Carrito
         Me.SalirButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SalirButton.Image = Global.Ferreteria.My.Resources.Resources.salida
-        Me.SalirButton.Location = New System.Drawing.Point(1300, 513)
+        Me.SalirButton.Location = New System.Drawing.Point(1261, 568)
         Me.SalirButton.Name = "SalirButton"
         Me.SalirButton.Size = New System.Drawing.Size(100, 101)
         Me.SalirButton.TabIndex = 6
@@ -104,10 +105,24 @@ Partial Class Carrito
         '
         Me.ProductosXLocal_dt.AllowUserToAddRows = False
         Me.ProductosXLocal_dt.AllowUserToDeleteRows = False
+        Me.ProductosXLocal_dt.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.ProductosXLocal_dt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ProductosXLocal_dt.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ProductosXLocal_dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProductosXLocal_dt.GridColor = System.Drawing.Color.ForestGreen
         Me.ProductosXLocal_dt.Location = New System.Drawing.Point(12, 35)
         Me.ProductosXLocal_dt.Name = "ProductosXLocal_dt"
         Me.ProductosXLocal_dt.ReadOnly = True
+        Me.ProductosXLocal_dt.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.ProductosXLocal_dt.RowHeadersVisible = False
+        Me.ProductosXLocal_dt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ProductosXLocal_dt.Size = New System.Drawing.Size(585, 554)
         Me.ProductosXLocal_dt.TabIndex = 33
         '
@@ -156,7 +171,7 @@ Partial Class Carrito
         Me.Agregar_Producto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Agregar_Producto.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Agregar_Producto.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Agregar_Producto.Location = New System.Drawing.Point(603, 480)
+        Me.Agregar_Producto.Location = New System.Drawing.Point(603, 590)
         Me.Agregar_Producto.Name = "Agregar_Producto"
         Me.Agregar_Producto.Size = New System.Drawing.Size(115, 23)
         Me.Agregar_Producto.TabIndex = 41
@@ -265,7 +280,7 @@ Partial Class Carrito
         '
         'Subtotal_tbx
         '
-        Me.Subtotal_tbx.Location = New System.Drawing.Point(724, 481)
+        Me.Subtotal_tbx.Location = New System.Drawing.Point(724, 591)
         Me.Subtotal_tbx.Name = "Subtotal_tbx"
         Me.Subtotal_tbx.Size = New System.Drawing.Size(136, 20)
         Me.Subtotal_tbx.TabIndex = 49
@@ -343,55 +358,16 @@ Partial Class Carrito
         Me.Agregar_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Agregar_Button.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Agregar_Button.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Agregar_Button.Location = New System.Drawing.Point(1070, 171)
+        Me.Agregar_Button.Location = New System.Drawing.Point(1070, 151)
         Me.Agregar_Button.Name = "Agregar_Button"
-        Me.Agregar_Button.Size = New System.Drawing.Size(118, 28)
+        Me.Agregar_Button.Size = New System.Drawing.Size(118, 48)
         Me.Agregar_Button.TabIndex = 56
         Me.Agregar_Button.Text = "Agregar Producto"
         Me.Agregar_Button.UseVisualStyleBackColor = False
         '
-        'Factura_Pedidos
-        '
-        Me.Factura_Pedidos.AllowUserToAddRows = False
-        Me.Factura_Pedidos.AllowUserToDeleteRows = False
-        Me.Factura_Pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Factura_Pedidos.Location = New System.Drawing.Point(603, 207)
-        Me.Factura_Pedidos.Name = "Factura_Pedidos"
-        Me.Factura_Pedidos.ReadOnly = True
-        Me.Factura_Pedidos.Size = New System.Drawing.Size(585, 267)
-        Me.Factura_Pedidos.TabIndex = 57
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.SteelBlue
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Location = New System.Drawing.Point(1231, 207)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(130, 47)
-        Me.Button3.TabIndex = 58
-        Me.Button3.Text = "Imprimir Factura"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Red
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button4.Location = New System.Drawing.Point(1231, 280)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(130, 47)
-        Me.Button4.TabIndex = 59
-        Me.Button4.Text = "Eliminar Factura"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'Total_tbx
         '
-        Me.Total_tbx.Location = New System.Drawing.Point(1052, 481)
+        Me.Total_tbx.Location = New System.Drawing.Point(1052, 591)
         Me.Total_tbx.Name = "Total_tbx"
         Me.Total_tbx.Size = New System.Drawing.Size(136, 20)
         Me.Total_tbx.TabIndex = 61
@@ -403,7 +379,7 @@ Partial Class Carrito
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button5.Location = New System.Drawing.Point(931, 480)
+        Me.Button5.Location = New System.Drawing.Point(931, 590)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(115, 23)
         Me.Button5.TabIndex = 60
@@ -412,7 +388,7 @@ Partial Class Carrito
         '
         'Impuesto_tbx
         '
-        Me.Impuesto_tbx.Location = New System.Drawing.Point(724, 513)
+        Me.Impuesto_tbx.Location = New System.Drawing.Point(724, 623)
         Me.Impuesto_tbx.Name = "Impuesto_tbx"
         Me.Impuesto_tbx.Size = New System.Drawing.Size(136, 20)
         Me.Impuesto_tbx.TabIndex = 63
@@ -424,7 +400,7 @@ Partial Class Carrito
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button6.Location = New System.Drawing.Point(603, 512)
+        Me.Button6.Location = New System.Drawing.Point(603, 622)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(115, 23)
         Me.Button6.TabIndex = 62
@@ -433,17 +409,56 @@ Partial Class Carrito
         '
         'Reinicia
         '
-        Me.Reinicia.BackColor = System.Drawing.Color.Red
+        Me.Reinicia.BackColor = System.Drawing.Color.RoyalBlue
         Me.Reinicia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Reinicia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Reinicia.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Reinicia.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Reinicia.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Reinicia.Location = New System.Drawing.Point(1052, 513)
+        Me.Reinicia.Location = New System.Drawing.Point(1231, 191)
         Me.Reinicia.Name = "Reinicia"
-        Me.Reinicia.Size = New System.Drawing.Size(136, 23)
+        Me.Reinicia.Size = New System.Drawing.Size(130, 45)
         Me.Reinicia.TabIndex = 64
-        Me.Reinicia.Text = "Otra compra"
+        Me.Reinicia.Text = "Nueva Compra"
         Me.Reinicia.UseVisualStyleBackColor = False
+        '
+        'Factura_Pedidos
+        '
+        Me.Factura_Pedidos.AllowUserToAddRows = False
+        Me.Factura_Pedidos.AllowUserToDeleteRows = False
+        Me.Factura_Pedidos.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.Factura_Pedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Factura_Pedidos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Factura_Pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Factura_Pedidos.GridColor = System.Drawing.Color.ForestGreen
+        Me.Factura_Pedidos.Location = New System.Drawing.Point(603, 207)
+        Me.Factura_Pedidos.Name = "Factura_Pedidos"
+        Me.Factura_Pedidos.ReadOnly = True
+        Me.Factura_Pedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Factura_Pedidos.RowHeadersVisible = False
+        Me.Factura_Pedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.Factura_Pedidos.Size = New System.Drawing.Size(585, 379)
+        Me.Factura_Pedidos.TabIndex = 65
+        '
+        'PDF_Factura
+        '
+        Me.PDF_Factura.BackColor = System.Drawing.Color.RoyalBlue
+        Me.PDF_Factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PDF_Factura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PDF_Factura.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PDF_Factura.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.PDF_Factura.Location = New System.Drawing.Point(931, 620)
+        Me.PDF_Factura.Name = "PDF_Factura"
+        Me.PDF_Factura.Size = New System.Drawing.Size(257, 47)
+        Me.PDF_Factura.TabIndex = 66
+        Me.PDF_Factura.Text = "Ver Factura"
+        Me.PDF_Factura.UseVisualStyleBackColor = False
         '
         'Carrito
         '
@@ -451,14 +466,13 @@ Partial Class Carrito
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Ferreteria.My.Resources.Resources.ShoppingCart
         Me.ClientSize = New System.Drawing.Size(1412, 694)
+        Me.Controls.Add(Me.PDF_Factura)
+        Me.Controls.Add(Me.Factura_Pedidos)
         Me.Controls.Add(Me.Reinicia)
         Me.Controls.Add(Me.Impuesto_tbx)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Total_tbx)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Factura_Pedidos)
         Me.Controls.Add(Me.Agregar_Button)
         Me.Controls.Add(Me.Cantidad_Producto)
         Me.Controls.Add(Me.Button2)
@@ -523,12 +537,11 @@ Partial Class Carrito
     Public WithEvents Button2 As Button
     Friend WithEvents Cantidad_Producto As TextBox
     Friend WithEvents Agregar_Button As Button
-    Friend WithEvents Factura_Pedidos As DataGridView
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Total_tbx As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Impuesto_tbx As TextBox
     Friend WithEvents Button6 As Button
     Friend WithEvents Reinicia As Button
+    Friend WithEvents Factura_Pedidos As DataGridView
+    Friend WithEvents PDF_Factura As Button
 End Class
