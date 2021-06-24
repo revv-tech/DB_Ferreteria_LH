@@ -136,6 +136,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FerreteriaLosHermanosDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAcercaDe.Designer.vb">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCarrito.Designer.vb">
       <DependentUpon>frmCarrito.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
   <ItemGroup>
     <EmbeddedResource Include="fmFerreteria.resx">
       <DependentUpon>fmFerreteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarrito.resx">
       <DependentUpon>frmCarrito.vb</DependentUpon>
@@ -434,6 +443,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checkout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombres-para-Ferreterias3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -142,9 +142,6 @@
   <data name="Nombres-para-Ferreterias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nombres-para-Ferreterias.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="borrar-cuenta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrar-cuenta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,19 +157,25 @@
   <data name="Nombres-para-Ferreterias2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nombres-para-Ferreterias2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="checkout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkout1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Nombres-para-Ferreterias1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nombres-para-Ferreterias1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nombres-para-Ferreterias1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombres-para-Ferreterias1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minititle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minititle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkout1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Nombres-para-Ferreterias3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombres-para-Ferreterias3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -66,49 +66,49 @@ Partial Class fmFerreteria
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.CategoriasToolStripMenuItem.Text = "Categorías"
         '
         'LocalesToolStripMenuItem
         '
         Me.LocalesToolStripMenuItem.Name = "LocalesToolStripMenuItem"
-        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LocalesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.LocalesToolStripMenuItem.Text = "Locales"
         '
         'MedidasToolStripMenuItem
         '
         Me.MedidasToolStripMenuItem.Name = "MedidasToolStripMenuItem"
-        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MedidasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.MedidasToolStripMenuItem.Text = "Medidas"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'TiposDeVentaToolStripMenuItem
         '
         Me.TiposDeVentaToolStripMenuItem.Name = "TiposDeVentaToolStripMenuItem"
-        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TiposDeVentaToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.TiposDeVentaToolStripMenuItem.Text = "Tipo de Pago"
         '
         'FacturaciónToolStripMenuItem

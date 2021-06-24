@@ -44,4 +44,8 @@
     Private Sub FacturaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturaciónToolStripMenuItem.Click
         Carrito.Show()
     End Sub
+
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        Nosotros.Show()
+    End Sub
 End Class

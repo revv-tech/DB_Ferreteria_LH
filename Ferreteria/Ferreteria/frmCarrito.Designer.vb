@@ -188,7 +188,7 @@ Partial Class Carrito
         Me.Cliente.Name = "Cliente"
         Me.Cliente.Size = New System.Drawing.Size(130, 23)
         Me.Cliente.TabIndex = 42
-        Me.Cliente.Text = "Añadir Cliente"
+        Me.Cliente.Text = "Cliente"
         Me.Cliente.UseVisualStyleBackColor = False
         '
         'Cliente_cbx
@@ -260,7 +260,7 @@ Partial Class Carrito
         Me.Tipo_De_Pago.Name = "Tipo_De_Pago"
         Me.Tipo_De_Pago.Size = New System.Drawing.Size(130, 23)
         Me.Tipo_De_Pago.TabIndex = 47
-        Me.Tipo_De_Pago.Text = "Añadir Tipo de Pago"
+        Me.Tipo_De_Pago.Text = "Tipo de Pago"
         Me.Tipo_De_Pago.UseVisualStyleBackColor = False
         '
         'Buscar_Producto

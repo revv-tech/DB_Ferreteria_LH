@@ -29,3 +29,4 @@ C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.vbproj.CopyComplete
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\itextsharp.dll
 C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\bin\Debug\itextsharp.xml
+C:\Users\Marco\Desktop\Documentos TEC\DB_Ferreteria_LH\Ferreteria\Ferreteria\obj\Debug\Ferreteria.Nosotros.resources

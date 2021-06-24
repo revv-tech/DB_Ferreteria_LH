@@ -247,8 +247,12 @@ Public Class Carrito
             Dim sqlad As SqlDataAdapter
             'Crea instancia de la variable'
             sqlCon = New SqlConnection(conn)
-
+            Dim sqlCon2 As SqlConnection
+            sqlCon2 = New SqlConnection(conn)
+            Dim sqlCon1 As SqlConnection
+            sqlCon1 = New SqlConnection(conn)
             Dim producto As New Propiedades
+            Dim cantidad As Integer
 
             producto.id_ = Agregar_Pro.SelectedValue
             producto.Cantidad_Ingreso = Cantidad_Producto.Text
@@ -268,14 +272,62 @@ Public Class Carrito
 
                 If dataR.Read() Then
                     producto.Precio_Producto = dataR.GetSqlInt32(5)
+
                 End If
 
                 producto.Total_Linea = producto.Precio_Producto * producto.Cantidad_Ingreso
             End Using
 
-            pedidos.Add(producto)
-            subtotal = subtotal + producto.Total_Linea
+
+            Using (sqlCon1)
+                Dim sqlComm As New SqlCommand()
+                'se hace la referencia a la conexión con la bd'
+                sqlComm.Connection = sqlCon1
+                'se indica el nombre del stored procedure y el tipo'
+                sqlCon1.Open()
+                sqlComm.CommandText = "sp_StockProductoXLocal" '
+                sqlComm.Parameters.AddWithValue("@ProductoID", Agregar_Pro.SelectedValue)
+                sqlComm.Parameters.AddWithValue("@LocalID", LocalCbx.SelectedValue)
+                'Tipo de comando'
+                sqlComm.CommandType = CommandType.StoredProcedure
+                Dim dataR As SqlDataReader
+                dataR = sqlComm.ExecuteReader()
+
+                If dataR.Read() Then
+                    cantidad = dataR.GetSqlInt32(0)
+
+                End If
+
+                producto.Total_Linea = producto.Precio_Producto * producto.Cantidad_Ingreso
+            End Using
+
+
+            Using (sqlCon2)
+
+                Dim sqlComm As New SqlCommand()
+                'se hace la referencia a la conexión con la bd'
+                sqlComm.Connection = sqlCon2
+                'se indica el nombre del stored procedure y el tipo'
+                sqlCon2.Open()
+                sqlComm.CommandText = "sp_ReducirInventariosXProductoYLocal" '
+                sqlComm.Parameters.AddWithValue("@Cant", producto.Cantidad_Ingreso)
+                sqlComm.Parameters.AddWithValue("@ProductoID", producto.id_)
+                sqlComm.Parameters.AddWithValue("@LocalID", LocalCbx.SelectedValue)
+                'Tipo de comando'
+                sqlComm.CommandType = CommandType.StoredProcedure
+                Dim dataR As SqlDataReader
+                dataR = sqlComm.ExecuteReader()
+
+
+            End Using
+            If cantidad > 0 Then
+                pedidos.Add(producto)
+                subtotal = subtotal + producto.Total_Linea
+            End If
+
+
         End If
+
         Agregar_Pro.Text = ""
         Cantidad_Producto.Text = ""
         Subtotal_tbx.Text = subtotal
@@ -576,7 +628,6 @@ Public Class Carrito
         Else
             MessageBox.Show("No se pudo realizar la factura")
         End If
-
 
         Me.Close()
     End Sub
