@@ -40,6 +40,7 @@ Partial Class fmFerreteria
         Me.InventarioPorLocalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventarioPorProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MostrarBitacoraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacturasPorLocalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirButton = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -119,7 +120,7 @@ Partial Class fmFerreteria
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FacturasPorClienteToolStripMenuItem, Me.PedidosPorClienteToolStripMenuItem, Me.InventarioPorLocalToolStripMenuItem, Me.InventarioPorProductoToolStripMenuItem, Me.MostrarBitacoraToolStripMenuItem})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FacturasPorClienteToolStripMenuItem, Me.PedidosPorClienteToolStripMenuItem, Me.FacturasPorLocalToolStripMenuItem, Me.InventarioPorLocalToolStripMenuItem, Me.InventarioPorProductoToolStripMenuItem, Me.MostrarBitacoraToolStripMenuItem})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -153,6 +154,12 @@ Partial Class fmFerreteria
         Me.MostrarBitacoraToolStripMenuItem.Name = "MostrarBitacoraToolStripMenuItem"
         Me.MostrarBitacoraToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.MostrarBitacoraToolStripMenuItem.Text = "Mostrar Bitacora"
+        '
+        'FacturasPorLocalToolStripMenuItem
+        '
+        Me.FacturasPorLocalToolStripMenuItem.Name = "FacturasPorLocalToolStripMenuItem"
+        Me.FacturasPorLocalToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.FacturasPorLocalToolStripMenuItem.Text = "Facturas por Local"
         '
         'AcercaDeToolStripMenuItem
         '
@@ -225,4 +232,5 @@ Partial Class fmFerreteria
     Friend WithEvents InventarioPorLocalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InventarioPorProductoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MostrarBitacoraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FacturasPorLocalToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -142,6 +142,12 @@
     <Compile Include="frmAcercaDe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBitacora.Designer.vb">
+      <DependentUpon>frmBitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCarrito.Designer.vb">
       <DependentUpon>frmCarrito.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,30 @@
     <Compile Include="frmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmFacturasXLocal1.Designer.vb">
+      <DependentUpon>frmFacturasXLocal1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturasXLocal1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturaXCliente.Designer.vb">
+      <DependentUpon>frmFacturaXCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturaXCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarioPorProducto.Designer.vb">
+      <DependentUpon>frmInventarioPorProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarioPorProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarioXLocal.Designer.vb">
+      <DependentUpon>frmInventarioXLocal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarioXLocal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLocales.Designer.vb">
       <DependentUpon>frmLocales.vb</DependentUpon>
     </Compile>
@@ -183,6 +213,12 @@
       <DependentUpon>frmMedidas.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMedidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPedidosXCliente.Designer.vb">
+      <DependentUpon>frmPedidosXCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPedidosXCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProductos.Designer.vb">
@@ -229,6 +265,9 @@
     <EmbeddedResource Include="frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBitacora.resx">
+      <DependentUpon>frmBitacora.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarrito.resx">
       <DependentUpon>frmCarrito.vb</DependentUpon>
     </EmbeddedResource>
@@ -241,11 +280,26 @@
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturasXLocal1.resx">
+      <DependentUpon>frmFacturasXLocal1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturaXCliente.resx">
+      <DependentUpon>frmFacturaXCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarioPorProducto.resx">
+      <DependentUpon>frmInventarioPorProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarioXLocal.resx">
+      <DependentUpon>frmInventarioXLocal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLocales.resx">
       <DependentUpon>frmLocales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedidas.resx">
       <DependentUpon>frmMedidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPedidosXCliente.resx">
+      <DependentUpon>frmPedidosXCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
@@ -446,6 +500,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Nombres-para-Ferreterias3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

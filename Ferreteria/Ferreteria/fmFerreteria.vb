@@ -48,4 +48,28 @@
     Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
         Nosotros.Show()
     End Sub
+
+    Private Sub FacturasPorClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturasPorClienteToolStripMenuItem.Click
+        frmFacturaXCliente.Show()
+    End Sub
+
+    Private Sub PedidosPorClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PedidosPorClienteToolStripMenuItem.Click
+        frmPedidosXCliente.Show()
+    End Sub
+
+    Private Sub InventarioPorLocalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioPorLocalToolStripMenuItem.Click
+        frmInventarioXLocal.Show()
+    End Sub
+
+    Private Sub InventarioPorProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioPorProductoToolStripMenuItem.Click
+        frmInventarioPorProducto.Show()
+    End Sub
+
+    Private Sub MostrarBitacoraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MostrarBitacoraToolStripMenuItem.Click
+        frmBitacora.Show()
+    End Sub
+
+    Private Sub FacturasPorLocalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacturasPorLocalToolStripMenuItem.Click
+        frmFacturasXLocal1.Show()
+    End Sub
 End Class

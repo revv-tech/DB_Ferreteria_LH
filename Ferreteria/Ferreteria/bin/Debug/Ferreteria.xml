@@ -57,6 +57,21 @@ Ferreteria
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Ferreteria.My.Resources.Resources.fondo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.fondo_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Ferreteria.My.Resources.Resources.fondo_3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Ferreteria.My.Resources.Resources.minititle">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

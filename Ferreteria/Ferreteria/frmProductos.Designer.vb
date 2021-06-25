@@ -24,6 +24,7 @@ Partial Class frmProductos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProductos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Update_Stock = New System.Windows.Forms.Button()
         Me.VerStock = New System.Windows.Forms.Button()
         Me.VerStock_tbx = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -53,7 +54,6 @@ Partial Class frmProductos
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.SeleccionarButton = New System.Windows.Forms.Button()
         Me.ModificarButton = New System.Windows.Forms.Button()
-        Me.Update_Stock = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -85,6 +85,20 @@ Partial Class frmProductos
         Me.GroupBox1.Size = New System.Drawing.Size(856, 192)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'Update_Stock
+        '
+        Me.Update_Stock.BackColor = System.Drawing.Color.Red
+        Me.Update_Stock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Update_Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Update_Stock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Update_Stock.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Update_Stock.Location = New System.Drawing.Point(468, 123)
+        Me.Update_Stock.Name = "Update_Stock"
+        Me.Update_Stock.Size = New System.Drawing.Size(115, 23)
+        Me.Update_Stock.TabIndex = 40
+        Me.Update_Stock.Text = "Actualizar Stock "
+        Me.Update_Stock.UseVisualStyleBackColor = False
         '
         'VerStock
         '
@@ -373,20 +387,6 @@ Partial Class frmProductos
         Me.ModificarButton.Size = New System.Drawing.Size(101, 107)
         Me.ModificarButton.TabIndex = 1
         Me.ModificarButton.UseVisualStyleBackColor = True
-        '
-        'Update_Stock
-        '
-        Me.Update_Stock.BackColor = System.Drawing.Color.Red
-        Me.Update_Stock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Update_Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Update_Stock.Font = New System.Drawing.Font("Microsoft Tai Le", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Update_Stock.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Update_Stock.Location = New System.Drawing.Point(468, 123)
-        Me.Update_Stock.Name = "Update_Stock"
-        Me.Update_Stock.Size = New System.Drawing.Size(115, 23)
-        Me.Update_Stock.TabIndex = 40
-        Me.Update_Stock.Text = "Actualizar Stock "
-        Me.Update_Stock.UseVisualStyleBackColor = False
         '
         'frmProductos
         '

@@ -2,6 +2,7 @@
 
 
 Public Class Funciones
+
     Dim cn As New SqlConnection(My.Settings.Conexion)
     Dim cmd As New SqlCommand
 
@@ -374,14 +375,11 @@ Public Class Funciones
             cn.Open()
             cmd = New SqlCommand(nombreSp, cn)
             cmd.CommandType = CommandType.StoredProcedure
-
             cmd.Parameters.AddWithValue("@cantidad", data.Cantidad_Ingreso)
             cmd.Parameters.AddWithValue("@precio", data.Precio_Producto)
             cmd.Parameters.AddWithValue("@totalLinea", data.Total_Linea)
             cmd.Parameters.AddWithValue("@ProductoID", data.id_)
             cmd.Parameters.AddWithValue("@FacturaID", data.FacturaID_)
-
-
             If cmd.ExecuteNonQuery() Then
                 Return True
             Else
@@ -552,7 +550,4 @@ Public Class Funciones
 
     End Function
 
-
 End Class
-
-
