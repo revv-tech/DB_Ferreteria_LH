@@ -510,5 +510,8 @@
   <ItemGroup>
     <None Include="Resources\fondo_2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferreteria.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

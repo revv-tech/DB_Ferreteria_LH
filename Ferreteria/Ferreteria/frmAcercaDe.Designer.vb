@@ -57,6 +57,7 @@ Partial Class Nosotros
         Me.ClientSize = New System.Drawing.Size(626, 220)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Enabled = False
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Nosotros"
         Me.Text = "Nosotros"
